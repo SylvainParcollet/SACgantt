@@ -63,7 +63,7 @@
   var h = 400;
 
 console.log("/////////////// D3 : " + d3);    
-  var svg = d3.selectAll("svg")
+  var svg = d3.selectAll(".svg")
   //.selectAll("svg")
   .append("svg")
   .attr("width", w)
@@ -503,11 +503,12 @@ function getCount(word, arr) {
 		const div = document.createElement('div');
                 let divid = changedProperties.widgetName;
                 this._tagContainer = divid;
-                div.innerHTML =  '<div id = "container"><div class = "svg"></div><div id = "tag"></div></div>';
+                div.innerHTML =  '<body><divid="container"><divclass="svg"></div><divid="tag"></div></div></body><style>*{margin:0;padding:0;}body{background:#fff;}#container{margin:0auto;position:relative;width:800px;overflow:visible;}.svg{width:800px;height:400px;overflow:visible;position:absolute;}.grid.tick{stroke:lightgrey;opacity:0.3;shape-rendering:crispEdges;}.gridpath{stroke-width:0;}#tag{color:white;background:#FA283D;width:150px;position:absolute;display:none;padding:3px6px;margin-left:-80px;font-size:11px;}#tag:before{border:solidtransparent;height:0;left:50%;margin-left:-5px;position:absolute;width:0;border-width:10px;border-bottom-color:#FA283D;top:-20px;}</style>';
                 shadowRoot.appendChild(div);
-				console.log(div);	
-				const css = document.createElement('div');
+				console.log(div);
 			/*
+				const css = document.createElement('div');
+			
 				if (typeOfChart === "Sankey")
 				{
 					css.innerHTML = '<style>#chartdiv {margin:0 auto;width: 100%; height: 800px;overflow:hidden;}</style>'
@@ -525,23 +526,14 @@ function getCount(word, arr) {
 				}
 				else				
 				{
-				*/
+				
 					css.innerHTML = '<style>#container{margin:0auto;position:relative;width:800px;height:400px;overflow:visible;}.svg{width:800px;height:400px;overflow:visible;position:absolute;}.grid.tick{stroke:lightgrey;opacity:0.3;shape-rendering:crispEdges;}.gridpath{stroke-width:0;}#tag{color:white;background:#FA283D;width:150px;position:absolute;display:none;padding:3px6px;margin-left:-80px;font-size:11px;}#tag:before{border:solidtransparent;content:"";height:0;left:50%;margin-left:-5px;position:absolute;width:0;border-width:10px;border-bottom-color:#FA283D;top:-20px;}</style>';
 					//css.innerHTML = '<style>#container{margin:0auto;position:relative;width:800px;height:400px;overflow:visible;}</style>'
 					console.log("@@@@@@@@ XYChart CSS  @@@@@@@@");		
-				
-		shadowRoot.appendChild(css);	
-		var mapcanvas_divstr = shadowRoot.getElementById("container");	
-                console.log(mapcanvas_divstr);	
-		Ar.push({
-                    'div': mapcanvas_divstr
-                });
+				*/
 	
-		console.log("@@@@@@@@ CSS  @@@@@@@@");
-		console.log(css);
 		console.log("@@@@@@@@ Shadow Root   @@@@@@@@");
 		console.log(shadowRoot);
-		console.log("@@@@@@@@  html @@@@@@@@");		
 				async function LoadLibs() {
 					try {
 						await loadScript(d3library);				
