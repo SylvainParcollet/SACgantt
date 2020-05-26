@@ -555,24 +555,7 @@ function getCount(word, arr) {
 		} else {		
 				console.log("**********///////********");
 				console.log("Type of chart : " + typeOfChart);
-				if (typeOfChart === "Sankey")
-				{
-					
-					console.log("************Sankey chart************");    
-					Sankeychartkaramba(Ar[0].div,"");
-				}
-				else if (typeOfChart === "Map")
-				{
-					console.log("************Map chart************");    
-					Mapkaramba(Ar[0].div,"");	
-				}
-				else if (typeOfChart === "Radar")
-				{	
-					console.log("************Radar chart************");    
-					Radarchartkaramba(Ar[0].div,"");
-				}
-				else
-				{	
+				
 					console.log("************Lolipop chart ************");    
 					console.log(typeOfChart);
 					var arraydata = [];
@@ -587,7 +570,6 @@ function getCount(word, arr) {
 					console.log("************ARRAY DATA************");    
 					console.log(arraydata);
 					Amchartkaramba(JSON.stringify(arraydata));
-				}
 		}
 	
 			
