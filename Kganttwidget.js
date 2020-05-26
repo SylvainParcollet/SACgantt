@@ -455,8 +455,128 @@ function Kgantt(value) {
 		
 };		
 		
+    class Kganttmain extends HTMLElement {
+        constructor() {
+	    console.log("-------------------------------------------------");	
+            console.log("constructor");
+	    console.log("-------------------------------------------------");	
+            super();
+            shadowRoot = this.attachShadow({
+                mode: "open"
+            });
+
+            shadowRoot.appendChild(template.content.cloneNode(true));
+
+            this._firstConnection = 0;
+
+            this.addEventListener("click", event => {
+                console.log('click');
+                var event = new Event("onClick");
+                this.dispatchEvent(event);
+
+            });
+            this._props = {};
+        }
+
+        //Fired when the widget is added to the html DOM of the page
+	    connectedCallback() {
+            console.log("connectedCallback");
+        }
+
+		//Fired when the widget is removed from the html DOM of the page (e.g. by hide)
+		disconnectedCallback() {
+			console.log("disconnectedCallback");
+        }
+
+		//When the custom widget is updated, the Custom Widget SDK framework executes this function first
+        onCustomWidgetBeforeUpdate(changedProperties) {
+            console.log("onCustomWidgetBeforeUpdate");
+            this._props = {
+                ...this._props,
+                ...changedProperties
+            };
+        }
+
+		//When the custom widget is updated, the Custom Widget SDK framework executes this function after the update
+        onCustomWidgetAfterUpdate(changedProperties) {
+
+           console.log("onCustomWidgetAfterUpdate");
+           console.log(changedProperties);
+
+	   console.log("%%%%%% INPUT %%%%%%");	
+
+	    if ("charttype" in changedProperties) {
+		console.log("charttype:" + changedProperties["charttype"]);
+		this.$charttype = changedProperties["charttype"];
+	    }
+
 		
-		
-		
+		if ("xvalue" in changedProperties) {
+				console.log("xvalue:" + changedProperties["xvalue"]);
+				this.$xvalue = changedProperties["xvalue"];
+
+		}
+
+		if ("yvalue" in changedProperties) {
+				console.log("yvalue:" + changedProperties["yvalue"]);
+				this.$yvalue = changedProperties["yvalue"];
+
+		}
+
+
+		var typeOfChart = this.$charttype;
+		console.log("Type of chart : " + typeOfChart);	
+		xvaluearr = this.$xvalue.split(';');
+		console.log(xvaluearr);		
+		yvaluearr = this.$yvalue.split(';');
+		console.log(yvaluearr);	
+		console.log("%%%%%% INPUT %%%%%%");	
+	    console.log("firsttime: " + this._firstConnection);
+	    var that = this;
+
+		if (this._firstConnection === 0) {
+			
+		console.log("@@@@@@@@  loading libraries @@@@@@@@");	
+				async function LoadLibs() {
+					try {
+						await loadScript(d3library);				
+					} catch (e) {
+						alert(e);
+					} finally {	
+						that._firstConnection = 1;	
+					}
+				}
+				LoadLibs();
+		} else {		
+				console.log("**********///////********");
+				console.log("Type of chart : " + typeOfChart);
+				Kgantt("");
+	/*
+					console.log("************Lolipop chart ************");    
+					console.log(typeOfChart);
+					var arraydata = [];
+					for (var i = 0; i < xvaluearr.length; i++) {
+						arraydata.push({
+							"category": xvaluearr[i],
+							"value": parseInt(yvaluearr[i])
+						});
+					}
+
+
+					console.log("************ARRAY DATA************");    
+					console.log(arraydata);
+					Amchartkaramba(Ar[0].div,JSON.stringify(arraydata));
+*/
+		}
+	
+			
+        }
+
+		//When the custom widget is removed from the canvas or the analytic application is closed
+        	onCustomWidgetDestroy() {
+		console.log("onCustomWidgetDestroy");
+        }
+    }
+    customElements.define("com-karamba-kgantt", Kganttmain);					
 		
 	})();
