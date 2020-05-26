@@ -10,6 +10,7 @@
     template.innerHTML = `
    		<style type="text/css">	
 		body {
+		font-family:"Open-Sans",sans-serif;
 		}
 		</style>  
 	  `
@@ -486,14 +487,18 @@ function Kgantt(value) {
 			console.log("@@@@@@@@  loading libraries @@@@@@@@");	
 			async function LoadLibs() {
 					try {
+						console.log("@@@@@@@@ try @@@@@@@@");	
 						await loadScript(d3library);				
 					} catch (e) {
+						console.log("@@@@@@@@ catch @@@@@@@@");	
 						alert(e);
-					} finally {	
+					} finally {
+						console.log("@@@@@@@@ finally @@@@@@@@");	
 						that._firstConnection = 1;	
 					}
 				}
 				LoadLibs();
+				console.log("@@@@@@@@ end @@@@@@@@");	
 		} else {		
 				console.log("**********///////********");
 				console.log("Type of chart : " + typeOfChart);
