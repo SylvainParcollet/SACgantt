@@ -94,6 +94,7 @@
 
 		shadowRoot.appendChild(script)
 	  });
+	}
 		
 // Create the gantt chart
 function Kgantt(value) {		
