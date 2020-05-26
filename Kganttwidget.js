@@ -583,7 +583,7 @@ function getCount(word, arr) {
 
 					console.log("************ARRAY DATA************");    
 					console.log(arraydata);
-					Amchartkaramba(AJSON.stringify(arraydata));
+					Amchartkaramba(JSON.stringify(arraydata));
 				}
 		}
 	
