@@ -11,11 +11,68 @@
 
 	
     template.innerHTML = `
-		<style type="text/css">	
-			body {
-			font-family:"Open-Sans",sans-serif;
-			}
-		</style>       
+		<style>
+		* {
+		      margin: 0;
+		      padding: 0;
+		  }
+		  body {
+		      background: #fff;
+		      font-family: 'Open-Sans',sans-serif;
+
+		  }
+
+		#container{
+		  margin: 0 auto;
+		  position: relative;
+		  width:800px;
+		  overflow: visible;
+		}
+
+
+		  .svg {
+		    width:800px;
+		    height:400px;
+		    overflow: visible;
+		    position:absolute;
+		}
+
+		.grid .tick {
+		    stroke: lightgrey;
+		    opacity: 0.3;
+		    shape-rendering: crispEdges;
+		}
+		.grid path {
+		      stroke-width: 0;
+		}
+
+
+		#tag {
+		  color: white;
+		  background: #FA283D;
+		  width: 150px;
+		  position: absolute;
+		  display: none;
+		  padding:3px 6px;
+		  margin-left: -80px;
+		  font-size: 11px;
+		}
+
+
+
+		#tag:before {
+		  border: solid transparent;
+		  content: ' ';
+		  height: 0;
+		  left: 50%;
+		  margin-left: -5px;
+		  position: absolute;
+		  width: 0;
+		  border-width: 10px;
+		  border-bottom-color: #FA283D;
+		  top: -20px;
+		}
+		</style>			   
 	`
 	
      //https://cdnjs.cloudflare.com/ajax/libs/d3/3.3.3/d3.min.js
@@ -503,7 +560,7 @@ function getCount(word, arr) {
 		const div = document.createElement('div');
                 let divid = changedProperties.widgetName;
                 this._tagContainer = divid;
-                div.innerHTML =  '<body><divid="container"><divclass="svg"></div><divid="tag"></div></div></body><style>*{margin:0;padding:0;}body{background:#fff;}#container{margin:0auto;position:relative;width:800px;overflow:visible;}.svg{width:800px;height:400px;overflow:visible;position:absolute;}.grid.tick{stroke:lightgrey;opacity:0.3;shape-rendering:crispEdges;}.gridpath{stroke-width:0;}#tag{color:white;background:#FA283D;width:150px;position:absolute;display:none;padding:3px6px;margin-left:-80px;font-size:11px;}#tag:before{border:solidtransparent;height:0;left:50%;margin-left:-5px;position:absolute;width:0;border-width:10px;border-bottom-color:#FA283D;top:-20px;}</style>';
+                div.innerHTML =  '<body><div id = "container"><div class = "svg"></div><div id = "tag"></div></div></body>';
                 shadowRoot.appendChild(div);
 				console.log(div);
 			/*
