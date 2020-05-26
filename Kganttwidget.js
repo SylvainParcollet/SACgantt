@@ -8,74 +8,10 @@
     let template = document.createElement("template");
 
     template.innerHTML = `
-        <style>
-        * {
-              margin: 0;
-              padding: 0;
-          }
-          body {
-              background: #fff;
-              font-family: 'Open-Sans',sans-serif;
-
-          }
-
-        #container{
-          margin: 0 auto;
-          position: relative;
-          width:800px;
-          overflow: visible;
-        }
-
-
-          .svg {
-            width:800px;
-            height:400px;
-            overflow: visible;
-            position:absolute;
-        }
-
-        .grid .tick {
-            stroke: lightgrey;
-            opacity: 0.3;
-            shape-rendering: crispEdges;
-        }
-        .grid path {
-              stroke-width: 0;
-        }
-
-
-        #tag {
-          color: white;
-          background: #FA283D;
-          width: 150px;
-          position: absolute;
-          display: none;
-          padding:3px 6px;
-          margin-left: -80px;
-          font-size: 11px;
-        }
-
-
-
-        #tag:before {
-          border: solid transparent;
-          content: ' ';
-          height: 0;
-          left: 50%;
-          margin-left: -5px;
-          position: absolute;
-          width: 0;
-          border-width: 10px;
-          border-bottom-color: #FA283D;
-          top: -20px;
-        }
-        </style>													  
-        <body>
-          <div id = "container">
-          <div class = "svg"></div>
-          <div id = "tag"></div>
-          </div>
-        </body>    
+   		<style type="text/css">	
+		body {
+		}
+		</style>  
 	  `
 	
     //https://d3js.org/d3.v3.min.js
@@ -536,9 +472,18 @@ function Kgantt(value) {
 	    var that = this;
 
 		if (this._firstConnection === 0) {
-			
-		console.log("@@@@@@@@  loading libraries @@@@@@@@");	
-				async function LoadLibs() {
+			console.log("@@@@@@@@  html @@@@@@@@");	
+			const div = document.createElement('div');
+			let divid = changedProperties.widgetName;
+			this._tagContainer = divid;
+			div.innerHTML = '<div id = "container"><div class = "svg"></div><div id = "tag"></div></div>';
+			shadowRoot.appendChild(div);
+			console.log(div);	
+			const css = document.createElement('div');
+			css.innerHTML = '<style>*{margin:0;padding:0;}body{background:#fff;font-family:'Open-Sans',sans-serif;}#container{margin:0auto;position:relative;width:800px;overflow:visible;}.svg{width:800px;height:400px;overflow:visible;position:absolute;}.grid.tick{stroke:lightgrey;opacity:0.3;shape-rendering:crispEdges;}.gridpath{stroke-width:0;}#tag{color:white;background:#FA283D;width:150px;position:absolute;display:none;padding:3px6px;margin-left:-80px;font-size:11px;}#tag:before{border:solidtransparent;content:'';height:0;left:50%;margin-left:-5px;position:absolute;width:0;border-width:10px;border-bottom-color:#FA283D;top:-20px;}</style>'
+			shadowRoot.appendChild(css);
+			console.log("@@@@@@@@  loading libraries @@@@@@@@");	
+			async function LoadLibs() {
 					try {
 						await loadScript(d3library);				
 					} catch (e) {
