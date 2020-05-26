@@ -70,7 +70,7 @@ console.log("/////////////// D3 : " + d3);
   .attr("height", h)
   .attr("class", "svg");
 
-
+console.log("/////////////// A"); 
     var taskArray = [
   {
     task: "conceptualize",
@@ -140,7 +140,7 @@ console.log("/////////////// D3 : " + d3);
 },
 
 ];
-
+console.log("/////////////// B"); 
 var dateFormat = d3.time.format("%Y-%m-%d");
 
 var timeScale = d3.time.scale()
@@ -189,7 +189,7 @@ vertLabels(gap, topPadding, sidePadding, barHeight, colorScale);
 
 }
 
-
+console.log("/////////////// C"); 
 function drawRects(theArray, theGap, theTopPad, theSidePad, theBarHeight, theColorScale, w, h){
 
 var bigRects = svg.append("g")
@@ -221,7 +221,7 @@ var bigRects = svg.append("g")
      .data(theArray)
      .enter();
 
-
+console.log("/////////////// D"); 
    var innerRects = rectangles.append("rect")
              .attr("rx", 3)
              .attr("ry", 3)
@@ -260,7 +260,7 @@ var bigRects = svg.append("g")
                .attr("text-height", theBarHeight)
                .attr("fill", "#fff");
 
-
+console.log("/////////////// E"); 
 rectText.on('mouseover', function(e) {
  // console.log(this.x.animVal.getItem(this));
                var tag = "";
@@ -291,7 +291,7 @@ rectText.on('mouseover', function(e) {
          output.style.display = "none";
              });
 
-
+console.log("/////////////// F"); 
 innerRects.on('mouseover', function(e) {
  //console.log(this);
          var tag = "";
@@ -327,7 +327,7 @@ innerRects.on('mouseover', function(e) {
 
 }
 
-
+console.log("/////////////// G"); 
 function makeGrid(theSidePad, theTopPad, w, h){
 
 var xAxis = d3.svg.axis()
@@ -348,7 +348,7 @@ var grid = svg.append('g')
             .attr("font-size", 10)
             .attr("dy", "1em");
 }
-
+console.log("/////////////// H"); 
 function vertLabels(theGap, theTopPad, theSidePad, theBarHeight, theColorScale){
   var numOccurances = new Array();
   var prevGap = 0;
@@ -390,7 +390,7 @@ function vertLabels(theGap, theTopPad, theSidePad, theBarHeight, theColorScale){
    });
 
 }
-
+console.log("/////////////// I"); 
 //from this stackexchange question: http://stackoverflow.com/questions/1890203/unique-for-arrays-in-javascript
 function checkUnique(arr) {
     var hash = {}, result = [];
@@ -526,8 +526,8 @@ function getCount(word, arr) {
 				else				
 				{
 				*/
-					//css.innerHTML = '<style>#container{margin:0auto;position:relative;width:800px;height:400px;overflow:visible;}.svg{width:800px;height:400px;overflow:visible;position:absolute;}.grid.tick{stroke:lightgrey;opacity:0.3;shape-rendering:crispEdges;}.gridpath{stroke-width:0;}#tag{color:white;background:#FA283D;width:150px;position:absolute;display:none;padding:3px6px;margin-left:-80px;font-size:11px;}#tag:before{border:solidtransparent;content:"";height:0;left:50%;margin-left:-5px;position:absolute;width:0;border-width:10px;border-bottom-color:#FA283D;top:-20px;}</style>'
-					css.innerHTML = '<style>#container{margin:0auto;position:relative;width:800px;height:400px;overflow:visible;}</style>'
+					css.innerHTML = '<style>#container{margin:0auto;position:relative;width:800px;height:400px;overflow:visible;}.svg{width:800px;height:400px;overflow:visible;position:absolute;}.grid.tick{stroke:lightgrey;opacity:0.3;shape-rendering:crispEdges;}.gridpath{stroke-width:0;}#tag{color:white;background:#FA283D;width:150px;position:absolute;display:none;padding:3px6px;margin-left:-80px;font-size:11px;}#tag:before{border:solidtransparent;content:"";height:0;left:50%;margin-left:-5px;position:absolute;width:0;border-width:10px;border-bottom-color:#FA283D;top:-20px;}</style>';
+					//css.innerHTML = '<style>#container{margin:0auto;position:relative;width:800px;height:400px;overflow:visible;}</style>'
 					console.log("@@@@@@@@ XYChart CSS  @@@@@@@@");		
 				
 		shadowRoot.appendChild(css);	
