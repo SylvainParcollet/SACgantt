@@ -12,9 +12,8 @@
 	
     template.innerHTML = `
 		<style type="text/css">	
-		body {
-		font-family: -apple-system, BlinkMacSystemFont,"Open-Sans", "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-		}
+			*{margin:0;padding:0;}
+			body{background:#fff;font-family:"Open-Sans",sans-serif;}
 		</style>       
 	`
 	
@@ -503,7 +502,7 @@ function getCount(word, arr) {
 		const div = document.createElement('div');
                 let divid = changedProperties.widgetName;
                 this._tagContainer = divid;
-                div.innerHTML = '<div id="chartdiv"></div>';
+                div.innerHTML =  '<div id = "container"><div class = "svg"></div><div id = "tag"></div></div>';
                 shadowRoot.appendChild(div);
 				console.log(div);	
 				const css = document.createElement('div');
