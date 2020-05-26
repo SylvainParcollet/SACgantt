@@ -12,7 +12,7 @@
 		{
 			"kind": "main",
 			"tag": "com-karamba-kgantt",
-			"url": "https://sylvainparcollet.github.io/SACgantt/Kgantt.js",
+			"url": "https://sylvainparcollet.github.io/SACgantt/Kganttwidget.js",
 			"integrity": "",
 			"ignoreIntegrity": true
 		}
