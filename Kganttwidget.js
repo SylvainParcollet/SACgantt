@@ -4,14 +4,14 @@
     var Ar = [];
     var xvaluearr = [];	
     var yvaluearr = [];	
-	
 
+    let template = document.createElement("template");
 
-    //let template = document.createElement("template");
+    template.innerHTML = `
+		<div id = "widget">
+		</div>
+	`
 
-	
-   
-	
      //https://cdnjs.cloudflare.com/ajax/libs/d3/3.3.3/d3.min.js
     const d3library = "https://sylvainparcollet.github.io/SACgantt/D3lib.js";
     //https://www.amcharts.com/lib/4/core.js
