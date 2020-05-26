@@ -3,7 +3,7 @@
 	"version": "1.0.0",
 	"name": "Kgantt widget",
 	"description": "Kgantt chart",
-	"newInstancePrefix": "Amchart",
+	"newInstancePrefix": "Kgantt",
 	"icon": "https://sylvainparcollet.github.io/SACgantt/KGantt.png",
 	"vendor": "Karamba",
 	"eula": "EULA",
