@@ -15,7 +15,7 @@
 		</style>  
 	  `
 	
-    //https://d3js.org/d3.v3.min.js
+    //https://cdnjs.cloudflare.com/ajax/libs/d3/3.3.3/d3.min.js
     const d3library = "https://sylvainparcollet.github.io/SACgantt/D3lib.js";
 
 	function loadScript(src) {
