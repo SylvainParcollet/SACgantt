@@ -480,7 +480,7 @@ function Kgantt(value) {
 			shadowRoot.appendChild(div);
 			console.log(div);	
 			const css = document.createElement('div');
-			css.innerHTML = '<style>*{margin:0;padding:0;}body{background:#fff;font-family:'Open-Sans',sans-serif;}#container{margin:0auto;position:relative;width:800px;overflow:visible;}.svg{width:800px;height:400px;overflow:visible;position:absolute;}.grid.tick{stroke:lightgrey;opacity:0.3;shape-rendering:crispEdges;}.gridpath{stroke-width:0;}#tag{color:white;background:#FA283D;width:150px;position:absolute;display:none;padding:3px6px;margin-left:-80px;font-size:11px;}#tag:before{border:solidtransparent;content:'';height:0;left:50%;margin-left:-5px;position:absolute;width:0;border-width:10px;border-bottom-color:#FA283D;top:-20px;}</style>'
+			css.innerHTML = '<style>*{margin:0;padding:0;}body{background:#fff;font-family:"Open-Sans",sans-serif;}#container{margin:0auto;position:relative;width:800px;overflow:visible;}.svg{width:800px;height:400px;overflow:visible;position:absolute;}.grid.tick{stroke:lightgrey;opacity:0.3;shape-rendering:crispEdges;}.gridpath{stroke-width:0;}#tag{color:white;background:#FA283D;width:150px;position:absolute;display:none;padding:3px6px;margin-left:-80px;font-size:11px;}#tag:before{border:solidtransparent;content:"";height:0;left:50%;margin-left:-5px;position:absolute;width:0;border-width:10px;border-bottom-color:#FA283D;top:-20px;}</style>'
 			shadowRoot.appendChild(css);
 			console.log("@@@@@@@@  loading libraries @@@@@@@@");	
 			async function LoadLibs() {
