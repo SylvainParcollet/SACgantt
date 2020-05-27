@@ -109,7 +109,7 @@
 	
 
     // Create the chart
-    function KGanttcreate(divid,value) {
+    function KGanttcreate(shadroot,value) {
 
         var data = {};
 		console.log("/////////////// Gantt - " + value);    
@@ -121,14 +121,15 @@
   var h = 400;
 	    
 	    
-console.log("/////////////// D3 -1 : " + JSON.stringify(shadowRoot));    
-console.log("/////////////// D3 -2 : " + JSON.stringify(this));   
+console.log("/////////////// D3 -1 : " + JSON.stringify(shadroot));    
+var canvas = shadroot.getElementById("container");	
+console.log(canvas);
+   
   var svg = d3.select("container").select(".svg")
   .append("svg")
   .attr("width", w)
   .attr("height", h)
   .attr("class", "svg");
-console.log("/////// Append child svg" + JSON.stringify(svg)); 	    
 
 	    /*
 var svg = d3.selectAll(divid)
@@ -640,7 +641,7 @@ function getCount(word, arr) {
 
 					console.log("************ARRAY DATA************");    
 					console.log(arraydata);
-					KGanttcreate(Ar[0].div,JSON.stringify(arraydata));
+					KGanttcreate(shadowRoot,JSON.stringify(arraydata));
 		}
 	
 			
