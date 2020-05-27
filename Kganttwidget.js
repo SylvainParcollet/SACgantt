@@ -8,9 +8,6 @@
     let template = document.createElement("template");
 
     template.innerHTML = `
-		<head>
-		<title>Gantt Chart Example</title>
-		</head>
 		<style>
 			* {
 			      margin: 0;
@@ -232,7 +229,7 @@ categories = checkUnique(categories);
 
 
 makeGant(taskArray, w, h);
-
+/*
 var title = svg.append("text")
               .text("Gantt Chart Process")
               .attr("x", w/2)
@@ -240,7 +237,7 @@ var title = svg.append("text")
               .attr("text-anchor", "middle")
               .attr("font-size", 18)
               .attr("fill", "#009FFC");
-
+*/
 
 
 function makeGant(tasks, pageWidth, pageHeight){
@@ -252,7 +249,7 @@ var sidePadding = 75;
 
 var colorScale = d3.scale.linear()
     .domain([0, categories.length])
-    .range(["#004C6D", "#C1E7FF"])
+    .range(["#81B89B", "#C1ECD4"])
     .interpolate(d3.interpolateHcl);
 
 makeGrid(sidePadding, topPadding, pageWidth, pageHeight);
