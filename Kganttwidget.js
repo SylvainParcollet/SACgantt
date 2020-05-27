@@ -119,9 +119,9 @@
 			}
 		var w = 800;
   var h = 400;
-console.log("/////////////// D3 : " + JSON.stringify(d3));    
-
-  var svg = d3.selectAll(".svg")
+console.log("/////////////// D3 -1 : " + this.$.elementId);    
+console.log("/////////////// D3 -2 : " + this._root);   
+  var svg = d3.selectAll(this.$.elementId)
   .append("svg")
   .attr("width", w)
   .attr("height", h)
@@ -481,11 +481,7 @@ function getCounts(arr) {
 // get specific from everything
 function getCount(word, arr) {
     return getCounts(arr)[word] || 0;
-}
-console.log("/////////////// J"); 
-console.log("/////////////// d3 : " + JSON.stringify(d3)); 	    
-shadowRoot.appendChild(d3);	    
-	    
+}	    	    
     };	
 
     class Kganttmain extends HTMLElement {
