@@ -329,12 +329,11 @@ console.log("/////////////// D");
                .attr("text-anchor", "middle")
                .attr("text-height", theBarHeight)
                .attr("fill", "#fff");
-
+/*
 console.log("/////////////// E"); 
 rectText.on('mouseover', function(e) {
  // console.log(this.x.animVal.getItem(this));
                var tag = "";
-/*
          if (d3.select(this).data()[0].details != undefined){
           tag = "Task: " + d3.select(this).data()[0].task + "<br/>" + 
                 "Type: " + d3.select(this).data()[0].type + "<br/>" + 
@@ -347,24 +346,7 @@ rectText.on('mouseover', function(e) {
                 "Starts: " + d3.select(this).data()[0].startTime + "<br/>" + 
                 "Ends: " + d3.select(this).data()[0].endTime;
          }
-	*/
-	console.log("/////////////// Mouse ON A : " + d3.select(canvas).data()[0]); 
-	console.log("/////////////// Mouse ON A1 : " + JSON.stringigy(d3)); 
-	var tagID = shadroot.getElementById("tag");
-	console.log("/////////////// Mouse ON A2 : " + JSON.stringigy(tagID));
 	
-	         if (d3.select(canvas).data()[0].details != undefined){
-          tag = "Task: " + d3.select(canvas).data()[0].task + "<br/>" + 
-                "Type: " + d3.select(canvas).data()[0].type + "<br/>" + 
-                "Starts: " + d3.select(canvas).data()[0].startTime + "<br/>" + 
-                "Ends: " + d3.select(canvas).data()[0].endTime + "<br/>" + 
-                "Details: " + d3.select(canvas).data()[0].details;
-         } else {
-          tag = "Task: " + d3.select(canvas).data()[0].task + "<br/>" + 
-                "Type: " + d3.select(canvas).data()[0].type + "<br/>" + 
-                "Starts: " + d3.select(canvas).data()[0].startTime + "<br/>" + 
-                "Ends: " + d3.select(canvas).data()[0].endTime;
-         }
 	
          var output = document.getElementById("tag");
 
@@ -411,7 +393,7 @@ console.log("/////////////// Mouse ON B");
          output.style.display = "none";
 
  });
-
+*/
 
 
 }
@@ -661,6 +643,71 @@ function getCount(word, arr) {
 					console.log("************ARRAY DATA************");    
 					console.log(arraydata);
 					KGanttcreate(shadowRoot,JSON.stringify(arraydata));
+					
+console.log("/////////////// E"); 
+rectText.on('mouseover', function(e) {
+ // console.log(this.x.animVal.getItem(this));
+               var tag = "";
+         if (d3.select(this).data()[0].details != undefined){
+          tag = "Task: " + d3.select(this).data()[0].task + "<br/>" + 
+                "Type: " + d3.select(this).data()[0].type + "<br/>" + 
+                "Starts: " + d3.select(this).data()[0].startTime + "<br/>" + 
+                "Ends: " + d3.select(this).data()[0].endTime + "<br/>" + 
+                "Details: " + d3.select(this).data()[0].details;
+         } else {
+          tag = "Task: " + d3.select(this).data()[0].task + "<br/>" + 
+                "Type: " + d3.select(this).data()[0].type + "<br/>" + 
+                "Starts: " + d3.select(this).data()[0].startTime + "<br/>" + 
+                "Ends: " + d3.select(this).data()[0].endTime;
+         }
+	
+	
+         var output = document.getElementById("tag");
+
+          var x = this.x.animVal.getItem(canvas) + "px";
+          var y = this.y.animVal.getItem(canvas) + 25 + "px";
+
+         output.innerHTML = tag;
+         output.style.top = y;
+         output.style.left = x;
+         output.style.display = "block";
+       }).on('mouseout', function() {
+         var output = document.getElementById("tag");
+         output.style.display = "none";
+             });
+
+console.log("/////////////// F"); 
+innerRects.on('mouseover', function(e) {
+ //console.log(this);
+         var tag = "";
+console.log("/////////////// Mouse ON B"); 
+         if (d3.select(this).data()[0].details != undefined){
+          tag = "Task: " + d3.select(this).data()[0].task + "<br/>" + 
+                "Type: " + d3.select(this).data()[0].type + "<br/>" + 
+                "Starts: " + d3.select(this).data()[0].startTime + "<br/>" + 
+                "Ends: " + d3.select(this).data()[0].endTime + "<br/>" + 
+                "Details: " + d3.select(this).data()[0].details;
+         } else {
+          tag = "Task: " + d3.select(this).data()[0].task + "<br/>" + 
+                "Type: " + d3.select(this).data()[0].type + "<br/>" + 
+                "Starts: " + d3.select(this).data()[0].startTime + "<br/>" + 
+                "Ends: " + d3.select(this).data()[0].endTime;
+         }
+         var output = document.getElementById("tag");
+
+         var x = (this.x.animVal.value + this.width.animVal.value/2) + "px";
+         var y = this.y.animVal.value + 25 + "px";
+
+         output.innerHTML = tag;
+         output.style.top = y;
+         output.style.left = x;
+         output.style.display = "block";
+       }).on('mouseout', function() {
+         var output = document.getElementById("tag");
+         output.style.display = "none";
+
+ });
+			
 		}
 	
 			
