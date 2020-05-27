@@ -119,9 +119,11 @@
 			}
 		var w = 800;
   var h = 400;
-console.log("/////////////// D3 -1 : " + this.$.elementId);    
-console.log("/////////////// D3 -2 : " + this._root);   
-  var svg = d3.selectAll(this.$.elementId)
+	    
+	    
+console.log("/////////////// D3 -1 : " + JSON.stringify(shadowRoot));    
+console.log("/////////////// D3 -2 : " + JSON.stringify(this));   
+  var svg = d3.select("container").select(".svg")
   .append("svg")
   .attr("width", w)
   .attr("height", h)
