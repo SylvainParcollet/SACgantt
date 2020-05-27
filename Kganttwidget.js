@@ -119,15 +119,14 @@
 			}
 		var w = 800;
   var h = 400;
-
-console.log("/////////////// D3 : " + d3);    
+console.log("/////////////// D3 : " + JSON.stringify(d3));    
   var svg = d3.selectAll(".svg")
   //.selectAll("svg")
   .append("svg")
   .attr("width", w)
   .attr("height", h)
   .attr("class", "svg");
-
+console.log("/////////////// D3 after : " + JSON.stringify(d3));    
 console.log("/////////////// A"); 
     var taskArray = [
   {
@@ -625,7 +624,7 @@ function getCount(word, arr) {
 
 					console.log("************ARRAY DATA************");    
 					console.log(arraydata);
-					//Amchartkaramba(JSON.stringify(arraydata));
+					Amchartkaramba(JSON.stringify(arraydata));
 		}
 	
 			
