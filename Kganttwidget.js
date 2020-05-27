@@ -250,7 +250,7 @@ var sidePadding = 75;
 
 var colorScale = d3.scale.linear()
     .domain([0, categories.length])
-    .range(["#00B9FA", "#F95002"])
+    .range(["#004C6D", "#C1E7FF"])
     .interpolate(d3.interpolateHcl);
 
 makeGrid(sidePadding, topPadding, pageWidth, pageHeight);
@@ -334,7 +334,7 @@ console.log("/////////////// E");
 rectText.on('mouseover', function(e) {
  // console.log(this.x.animVal.getItem(this));
                var tag = "";
-
+/*
          if (d3.select(this).data()[0].details != undefined){
           tag = "Task: " + d3.select(this).data()[0].task + "<br/>" + 
                 "Type: " + d3.select(this).data()[0].type + "<br/>" + 
@@ -347,10 +347,26 @@ rectText.on('mouseover', function(e) {
                 "Starts: " + d3.select(this).data()[0].startTime + "<br/>" + 
                 "Ends: " + d3.select(this).data()[0].endTime;
          }
+	*/
+	console.log("/////////////// Mouse ON A"); 
+	
+	         if (d3.select(canvas).data()[0].details != undefined){
+          tag = "Task: " + d3.select(canvas).data()[0].task + "<br/>" + 
+                "Type: " + d3.select(canvas).data()[0].type + "<br/>" + 
+                "Starts: " + d3.select(canvas).data()[0].startTime + "<br/>" + 
+                "Ends: " + d3.select(canvas).data()[0].endTime + "<br/>" + 
+                "Details: " + d3.select(canvas).data()[0].details;
+         } else {
+          tag = "Task: " + d3.select(canvas).data()[0].task + "<br/>" + 
+                "Type: " + d3.select(canvas).data()[0].type + "<br/>" + 
+                "Starts: " + d3.select(canvas).data()[0].startTime + "<br/>" + 
+                "Ends: " + d3.select(canvas).data()[0].endTime;
+         }
+	
          var output = document.getElementById("tag");
 
-          var x = this.x.animVal.getItem(this) + "px";
-          var y = this.y.animVal.getItem(this) + 25 + "px";
+          var x = this.x.animVal.getItem(canvas) + "px";
+          var y = this.y.animVal.getItem(canvas) + 25 + "px";
 
          output.innerHTML = tag;
          output.style.top = y;
@@ -365,7 +381,7 @@ console.log("/////////////// F");
 innerRects.on('mouseover', function(e) {
  //console.log(this);
          var tag = "";
-
+console.log("/////////////// Mouse ON B"); 
          if (d3.select(this).data()[0].details != undefined){
           tag = "Task: " + d3.select(this).data()[0].task + "<br/>" + 
                 "Type: " + d3.select(this).data()[0].type + "<br/>" + 
