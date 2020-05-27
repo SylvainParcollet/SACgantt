@@ -15,6 +15,7 @@
 
      //https://cdnjs.cloudflare.com/ajax/libs/d3/3.3.3/d3.min.js
     const d3library = "https://sylvainparcollet.github.io/SACgantt/D3lib.js";
+    const Kgantt = "https://sylvainparcollet.github.io/SACgantt/Kgantt.js";		
     //https://www.amcharts.com/lib/4/core.js
     //const amchartscorejs = "https://sylvainparcollet.github.io/amchartslib/core.js";
     //https://www.amcharts.com/lib/4/charts.js
@@ -536,7 +537,8 @@ function getCount(word, arr) {
 		console.log(shadowRoot);
 				async function LoadLibs() {
 					try {
-						await loadScript(d3library);				
+						await loadScript(d3library);	
+						await loadScript(Kgantt);
 					} catch (e) {
 						alert(e);
 					} finally {	
@@ -561,7 +563,7 @@ function getCount(word, arr) {
 
 					console.log("************ARRAY DATA************");    
 					console.log(arraydata);
-					Amchartkaramba(JSON.stringify(arraydata));
+					//Amchartkaramba(JSON.stringify(arraydata));
 		}
 	
 			
