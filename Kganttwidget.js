@@ -49,13 +49,14 @@
 
 			#tag {
 			  color: white;
-			  background: #FA283D;
+			  background: #8B372B;
 			  width: 150px;
 			  position: absolute;
 			  display: none;
 			  padding:3px 6px;
 			  margin-left: -80px;
 			  font-size: 11px;
+			  z-index: -1;
 			}
 
 
@@ -69,8 +70,9 @@
 			  position: absolute;
 			  width: 0;
 			  border-width: 10px;
-			  border-bottom-color: #FA283D;
+			  border-bottom-color: #8B372B;
 			  top: -20px;
+                          z-index: -1;
 			}
 		</style>
 	`
