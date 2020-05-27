@@ -349,8 +349,9 @@ rectText.on('mouseover', function(e) {
          }
 	
 	
-         var output = document.getElementById("tag");
-
+         //SPACMNT var output = document.getElementById("tag");
+	 var output = shadroot.getElementById("tag");
+	
           var x = this.x.animVal.getItem(canvas) + "px";
           var y = this.y.animVal.getItem(canvas) + 25 + "px";
 
@@ -359,7 +360,8 @@ rectText.on('mouseover', function(e) {
          output.style.left = x;
          output.style.display = "block";
        }).on('mouseout', function() {
-         var output = document.getElementById("tag");
+         //SPACMNT var output = document.getElementById("tag");
+	 var output = shadroot.getElementById("tag");
          output.style.display = "none";
              });
 
@@ -368,7 +370,6 @@ innerRects.on('mouseover', function(e) {
  //console.log(this);
          var tag = "";
 console.log("/////////////// Mouse ON B"); 
-console.log("/////////////// Mouse ON B1 : " + JSON.stringify(d3)); 	
          if (d3.select(this).data()[0].details != undefined){
           tag = "Task: " + d3.select(this).data()[0].task + "<br/>" + 
                 "Type: " + d3.select(this).data()[0].type + "<br/>" + 
@@ -381,7 +382,8 @@ console.log("/////////////// Mouse ON B1 : " + JSON.stringify(d3));
                 "Starts: " + d3.select(this).data()[0].startTime + "<br/>" + 
                 "Ends: " + d3.select(this).data()[0].endTime;
          }
-         var output = document.getElementById("tag");
+         //SPACMNT var output = document.getElementById("tag");
+	 var output = shadroot.getElementById("tag");
 
          var x = (this.x.animVal.value + this.width.animVal.value/2) + "px";
          var y = this.y.animVal.value + 25 + "px";
@@ -391,7 +393,8 @@ console.log("/////////////// Mouse ON B1 : " + JSON.stringify(d3));
          output.style.left = x;
          output.style.display = "block";
        }).on('mouseout', function() {
-         var output = document.getElementById("tag");
+         //SPACMNT var output = document.getElementById("tag");
+	 var output = shadroot.getElementById("tag");
          output.style.display = "none";
 
  });
@@ -489,7 +492,7 @@ function getCount(word, arr) {
     return getCounts(arr)[word] || 0;
 }
 	    
-console.log("/////////////// EOF : " + JSON.stringify(d3)); 	    
+console.log("/////////////// EOF : " + JSON.stringify(shadroot)); 	    
     };	
 
     class Kganttmain extends HTMLElement {
