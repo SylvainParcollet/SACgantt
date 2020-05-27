@@ -407,7 +407,7 @@ function makeGrid(theSidePad, theTopPad, w, h){
 
 var xAxis = d3.svg.axis()
     .scale(timeScale)
-    .orient('top')
+    .orient('bottom')
     .ticks(d3.time.days, 1)
     .tickSize(-h+theTopPad+20, 0, 0)
     .tickFormat(d3.time.format('%d %b'));
