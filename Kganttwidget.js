@@ -46,13 +46,14 @@
 
 			#tag {
 			  color: white;
-			  background: #E9A858;
+			  background: #93003A;
 			  width: 150px;
 			  position: absolute;
 			  display: none;
 			  padding:3px 6px;
 			  margin-left: -80px;
 			  font-size: 11px;
+                          z-index: 10; 	
 			}
 
 
@@ -66,8 +67,9 @@
 			  position: absolute;
 			  width: 0;
 			  border-width: 10px;
-			  border-bottom-color: #E9A858;
+			  border-bottom-color: #93003A;
 			  top: -20px;
+			  z-index: 10; 	
 			}
 		</style>
 	`
@@ -247,7 +249,7 @@ var sidePadding = 75;
 
 var colorScale = d3.scale.linear()
     .domain([0, categories.length])
-    .range(["#B4D5F2", "#D2E8FD"])
+    .range(["#1976D2", "#E3F2FD"])
     .interpolate(d3.interpolateHcl);
 
 makeGrid(sidePadding, topPadding, pageWidth, pageHeight);
