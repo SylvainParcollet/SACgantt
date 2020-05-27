@@ -77,7 +77,7 @@
 
      //https://cdnjs.cloudflare.com/ajax/libs/d3/3.3.3/d3.min.js
     const d3library = "https://sylvainparcollet.github.io/SACgantt/D3lib.js";
-    const Kganttlib = "https://sylvainparcollet.github.io/SACgantt/Kgantt.js";		
+    //const Kganttlib = "https://sylvainparcollet.github.io/SACgantt/Kgantt.js";		
     //https://www.amcharts.com/lib/4/core.js
     //const amchartscorejs = "https://sylvainparcollet.github.io/amchartslib/core.js";
     //https://www.amcharts.com/lib/4/charts.js
@@ -109,7 +109,7 @@
 	
 
     // Create the chart
-    function Amchartkaramba(value) {
+    function KGanttcreate(divid,value) {
 
         var data = {};
 		console.log("/////////////// Gantt - " + value);    
@@ -120,12 +120,22 @@
 		var w = 800;
   var h = 400;
 console.log("/////////////// D3 : " + JSON.stringify(d3));    
+
   var svg = d3.selectAll(".svg")
-  //.selectAll("svg")
   .append("svg")
   .attr("width", w)
   .attr("height", h)
   .attr("class", "svg");
+console.log("/////// Append child svg" + JSON.stringify(svg)); 	    
+shadowRoot.appendChild(svg);
+	    /*
+var svg = d3.selectAll(divid)
+	.append("svg")
+	.attr("width", w)
+	.attr("height", h)
+	.attr("class", "svg");
+	
+	*/
 console.log("/////////////// D3 after : " + JSON.stringify(d3));    
 console.log("/////////////// A"); 
     var taskArray = [
@@ -596,10 +606,15 @@ function getCount(word, arr) {
 	
 		console.log("@@@@@@@@ Shadow Root   @@@@@@@@");
 		console.log(shadowRoot);
+		var mapcanvas_divstr = shadowRoot.getElementById("container");	
+                console.log(mapcanvas_divstr);	
+		Ar.push({
+                    'div': mapcanvas_divstr
+                });	
 				async function LoadLibs() {
 					try {
 						await loadScript(d3library);	
-						await loadScript(Kganttlib);
+						//await loadScript(Kganttlib);
 					} catch (e) {
 						alert(e);
 					} finally {	
@@ -624,7 +639,7 @@ function getCount(word, arr) {
 
 					console.log("************ARRAY DATA************");    
 					console.log(arraydata);
-					Amchartkaramba(JSON.stringify(arraydata));
+					KGanttcreate(Ar[0].div,JSON.stringify(arraydata));
 		}
 	
 			
