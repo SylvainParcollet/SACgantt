@@ -329,8 +329,9 @@ console.log("/////////////// D");
                .attr("text-anchor", "middle")
                .attr("text-height", theBarHeight)
                .attr("fill", "#fff");
-/*
+
 console.log("/////////////// E"); 
+console.log("/////////////// Mouse ON A1 : " + JSON.stringify(d3)); 		
 rectText.on('mouseover', function(e) {
  // console.log(this.x.animVal.getItem(this));
                var tag = "";
@@ -367,6 +368,7 @@ innerRects.on('mouseover', function(e) {
  //console.log(this);
          var tag = "";
 console.log("/////////////// Mouse ON B"); 
+console.log("/////////////// Mouse ON B1 : " + JSON.stringify(d3)); 	
          if (d3.select(this).data()[0].details != undefined){
           tag = "Task: " + d3.select(this).data()[0].task + "<br/>" + 
                 "Type: " + d3.select(this).data()[0].type + "<br/>" + 
@@ -393,7 +395,7 @@ console.log("/////////////// Mouse ON B");
          output.style.display = "none";
 
  });
-*/
+
 
 
 }
@@ -485,7 +487,9 @@ function getCounts(arr) {
 // get specific from everything
 function getCount(word, arr) {
     return getCounts(arr)[word] || 0;
-}	    	    
+}
+	    
+console.log("/////////////// EOF : " + JSON.stringify(d3)); 	    
     };	
 
     class Kganttmain extends HTMLElement {
