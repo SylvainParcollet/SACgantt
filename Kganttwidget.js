@@ -348,7 +348,10 @@ rectText.on('mouseover', function(e) {
                 "Ends: " + d3.select(this).data()[0].endTime;
          }
 	*/
-	console.log("/////////////// Mouse ON A"); 
+	console.log("/////////////// Mouse ON A : " + d3.select(canvas).data()[0]); 
+	console.log("/////////////// Mouse ON A1 : " + JSON.stringigy(d3)); 
+	var tagID = shadroot.getElementById("tag");
+	console.log("/////////////// Mouse ON A2 : " + JSON.stringigy(tagID));
 	
 	         if (d3.select(canvas).data()[0].details != undefined){
           tag = "Task: " + d3.select(canvas).data()[0].task + "<br/>" + 
