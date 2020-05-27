@@ -127,7 +127,7 @@ console.log("/////////////// D3 : " + JSON.stringify(d3));
   .attr("height", h)
   .attr("class", "svg");
 console.log("/////// Append child svg" + JSON.stringify(svg)); 	    
-shadowRoot.appendChild(svg);
+
 	    /*
 var svg = d3.selectAll(divid)
 	.append("svg")
@@ -482,7 +482,10 @@ function getCounts(arr) {
 function getCount(word, arr) {
     return getCounts(arr)[word] || 0;
 }
-
+console.log("/////////////// J"); 
+console.log("/////////////// d3 : " + JSON.stringify(d3)); 	    
+shadowRoot.appendChild(d3);	    
+	    
     };	
 
     class Kganttmain extends HTMLElement {
