@@ -121,11 +121,11 @@
   var h = 400;
 	    
 	    
-console.log("/////////////// D3 -1 : " + JSON.stringify(shadroot));    
+console.log("/////////////// D3 -1 : " + shadroot);    
 var canvas = shadroot.getElementById("container");	
 console.log(canvas);
    
-  var svg = d3.select("container").select(".svg")
+  var svg = d3.select(canvas)
   .append("svg")
   .attr("width", w)
   .attr("height", h)
