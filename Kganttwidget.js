@@ -356,7 +356,7 @@ rectText.on('mouseover', function(e) {
          output.style.top = y;
          output.style.left = x;
          output.style.display = "block";
-	 output.style.z-index = -1;
+	 output.style.position = "relative";
        }).on('mouseout', function() {
          //SPACMNT var output = document.getElementById("tag");
 	 var output = shadroot.getElementById("tag");
@@ -390,7 +390,7 @@ console.log("/////////////// Mouse ON B");
          output.style.top = y;
          output.style.left = x;
          output.style.display = "block";
-	 output.style.z-index = -1;
+	 output.style.position = "relative";
        }).on('mouseout', function() {
          //SPACMNT var output = document.getElementById("tag");
 	 var output = shadroot.getElementById("tag");
