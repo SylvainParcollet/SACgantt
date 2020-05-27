@@ -46,14 +46,13 @@
 
 			#tag {
 			  color: white;
-			  background: #8B372B;
+			  background: #E9A858;
 			  width: 150px;
 			  position: absolute;
 			  display: none;
 			  padding:3px 6px;
 			  margin-left: -80px;
 			  font-size: 11px;
-			  z-index: -1;
 			}
 
 
@@ -67,9 +66,8 @@
 			  position: absolute;
 			  width: 0;
 			  border-width: 10px;
-			  border-bottom-color: #8B372B;
+			  border-bottom-color: #E9A858;
 			  top: -20px;
-                          z-index: -1;
 			}
 		</style>
 	`
@@ -249,7 +247,7 @@ var sidePadding = 75;
 
 var colorScale = d3.scale.linear()
     .domain([0, categories.length])
-    .range(["#81B89B", "#C1ECD4"])
+    .range(["#B4D5F2", "#D2E8FD"])
     .interpolate(d3.interpolateHcl);
 
 makeGrid(sidePadding, topPadding, pageWidth, pageHeight);
@@ -358,6 +356,7 @@ rectText.on('mouseover', function(e) {
          output.style.top = y;
          output.style.left = x;
          output.style.display = "block";
+	 output.style.z-index = -1;
        }).on('mouseout', function() {
          //SPACMNT var output = document.getElementById("tag");
 	 var output = shadroot.getElementById("tag");
@@ -391,6 +390,7 @@ console.log("/////////////// Mouse ON B");
          output.style.top = y;
          output.style.left = x;
          output.style.display = "block";
+	 output.style.z-index = -1;
        }).on('mouseout', function() {
          //SPACMNT var output = document.getElementById("tag");
 	 var output = shadroot.getElementById("tag");
