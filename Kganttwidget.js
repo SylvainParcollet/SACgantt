@@ -623,7 +623,7 @@ console.log("/////////////// EOF : " + JSON.stringify(shadroot));
                     'div': mapcanvas_divstr
                 });
 		console.log("@@@@@@@@ Ar   @@@@@@@@");
-		console.log(JSON.stringify(Ar[0].div));
+		console.log(Ar[0].div);
 				async function LoadLibs() {
 					try {
 						await loadScript(d3library);	
@@ -655,9 +655,7 @@ console.log("/////////////// EOF : " + JSON.stringify(shadroot));
 
 					KGanttcreate(Ar[0].div,JSON.stringify(arraydata));
 			
-		}
-	
-			
+		}			
         }
 
 		//When the custom widget is removed from the canvas or the analytic application is closed
