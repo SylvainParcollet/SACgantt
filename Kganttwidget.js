@@ -188,8 +188,8 @@
 
 ];
 console.log("/////////////// B"); 
-//var dateFormat = d3.time.format("%Y-%m-%d");
-var dateFormat = d3.time.format("%d-%m-%Y");	    
+var dateFormat = d3.time.format("%Y-%m-%d");
+//var dateFormat = d3.time.format("%d-%m-%Y");	    
 
 var timeScale = d3.time.scale()
         .domain([d3.min(taskArray, function(d) {return dateFormat.parse(d.startTime);}),
