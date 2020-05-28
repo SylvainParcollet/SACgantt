@@ -8,7 +8,6 @@
     let template = document.createElement("template");
 
     template.innerHTML = `
-		<div id = "ganttwidget">
 			<style>
 				* {
 				      margin: 0;
@@ -73,7 +72,6 @@
 				  z-index: 10; 	
 				}
 			</style>
-		</div>
 		`
 
      //https://cdnjs.cloudflare.com/ajax/libs/d3/3.3.3/d3.min.js
@@ -121,13 +119,13 @@
 	var w = 800;
   	var h = 400;
   	
-	console.log("/////////////// Kgantt chart : " + divid);    
+	console.log("/////////////// Kgantt chart : " + Ar[0].div);    
 	    
 //console.log("/////////////// D3 -1 : " + shadroot);    
 //var canvas = shadroot.getElementById("container");	
 //console.log(canvas);
    
-  var svg = d3.select(divid)
+  var svg = d3.select(Ar[0].div)
   .append("svg")
   .attr("width", w)
   .attr("height", h)
