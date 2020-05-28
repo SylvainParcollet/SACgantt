@@ -525,40 +525,40 @@ console.log("/////////////// EOF : " + JSON.stringify(divid));
                 this.$task = changedProperties["task"];
             }
 
-	var task = this.$task;
-	console.log("task : " + task);	
+	var vtask = this.$task;
+	console.log("task : " + vtask);	
 	
 	    if ("type" in changedProperties) {
                 console.log("type: " + changedProperties["type"]);
                 this.$type = changedProperties["type"];
             }
 
-	var type = this.$type;
-	console.log("type : " + type);	
+	var vtype = this.$type;
+	console.log("type : " + vtype);	
 	
 	    if ("starttime" in changedProperties) {
                 console.log("starttime: " + changedProperties["starttime"]);
                 this.$starttime = changedProperties["starttime"];
             }
 
-	var starttime = this.$starttime;
-	console.log("starttime : " + starttime);	
+	var vstarttime = this.$starttime;
+	console.log("starttime : " + vstarttime);	
 	
 	    if ("endtime" in changedProperties) {
                 console.log("endtime: " + changedProperties["endtime"]);
                 this.$endtime = changedProperties["endtime"];
             }
 
-	var endtime = this.$endtime;
-	console.log("endtime : " + endtime);	
+	var vendtime = this.$endtime;
+	console.log("endtime : " + vendtime);	
 	
 	    if ("details" in changedProperties) {
                 console.log("details: " + changedProperties["details"]);
                 this.$details = changedProperties["details"];
             }
 
-	var details = this.$details;
-	console.log("details : " + details);	
+	var vdetails = this.$details;
+	console.log("details : " + vdetails);	
 	console.log("%%%%%% INPUT %%%%%%");	
 	console.log("firsttime: " + this._firstConnection);
 	var that = this;
