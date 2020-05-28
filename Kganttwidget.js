@@ -520,45 +520,45 @@ console.log("/////////////// EOF : " + JSON.stringify(divid));
 
 	   console.log("%%%%%% INPUT %%%%%%");	
 
-            if ("task" in changedProperties) {
-                console.log("task: " + changedProperties["task"]);
-                this.$task = changedProperties["task"];
+            if ("inptask" in changedProperties) {
+                console.log("task: " + changedProperties["inptask"]);
+                this.$inptask = changedProperties["inptask"];
             }
 
-	var vtask = this.$task;
-	console.log("task : " + vtask);	
+	var inptask = this.$inptask;
+	console.log("task : " + inptask);	
 	
-	    if ("type" in changedProperties) {
-                console.log("type: " + changedProperties["type"]);
-                this.$type = changedProperties["type"];
+	    if ("inptype" in changedProperties) {
+                console.log("type: " + changedProperties["inptype"]);
+                this.$inptype = changedProperties["inptype"];
             }
 
-	var vtype = this.$type;
-	console.log("type : " + vtype);	
+	var inptype = this.$inptype;
+	console.log("type : " + inptype);	
 	
-	    if ("starttime" in changedProperties) {
-                console.log("starttime: " + changedProperties["starttime"]);
-                this.$starttime = changedProperties["starttime"];
+	    if ("inpstarttime" in changedProperties) {
+                console.log("starttime: " + changedProperties["inpstarttime"]);
+                this.$inpstarttime = changedProperties["inpstarttime"];
             }
 
-	var vstarttime = this.$starttime;
-	console.log("starttime : " + vstarttime);	
+	var inpstarttime = this.$inpstarttime;
+	console.log("starttime : " + inpstarttime);	
 	
-	    if ("endtime" in changedProperties) {
-                console.log("endtime: " + changedProperties["endtime"]);
-                this.$endtime = changedProperties["endtime"];
+	    if ("inpendtime" in changedProperties) {
+                console.log("endtime: " + changedProperties["inpendtime"]);
+                this.$inpendtime = changedProperties["inpendtime"];
             }
 
-	var vendtime = this.$endtime;
-	console.log("endtime : " + vendtime);	
+	var inpendtime = this.$inpendtime;
+	console.log("endtime : " + inpendtime);	
 	
-	    if ("details" in changedProperties) {
-                console.log("details: " + changedProperties["details"]);
-                this.$details = changedProperties["details"];
+	    if ("inpdetails" in changedProperties) {
+                console.log("details: " + changedProperties["inpdetails"]);
+                this.$inpdetails = changedProperties["inpdetails"];
             }
 
-	var vdetails = this.$details;
-	console.log("details : " + vdetails);	
+	var inpdetails = this.$inpdetails;
+	console.log("details : " + inpdetails);	
 	console.log("%%%%%% INPUT %%%%%%");	
 	console.log("firsttime: " + this._firstConnection);
 	var that = this;
