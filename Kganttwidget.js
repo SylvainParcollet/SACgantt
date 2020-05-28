@@ -120,7 +120,7 @@
   	var h = 400;
   	
 	console.log("/////////////// Kgantt chart : " + Ar[0].div);    
-	var ganttcanvas = document.getElementById("container");	    
+	var ganttcanvas = this.shadowRoot.getElementById("container");	    
 	console.log("/////////////// Kgantt chart : " + ganttcanvas);        
 	    
 //console.log("/////////////// D3 -1 : " + shadroot);    
