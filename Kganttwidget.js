@@ -528,7 +528,7 @@ console.log("/////////////// EOF : " + JSON.stringify(divid));
                 this.$inptask = changedProperties["inptask"];
             }
 
-	var taskarr = this.$inptask.split(';');
+	taskarr = this.$inptask.split(';');
 	console.log("task : " + JSON.stringify(taskarr));	
 	
 	    if ("inptype" in changedProperties) {
@@ -536,7 +536,7 @@ console.log("/////////////// EOF : " + JSON.stringify(divid));
                 this.$inptype = changedProperties["inptype"];
             }
 
-	var typearr = this.$inptype.split(';');
+	typearr = this.$inptype.split(';');
 	console.log("task : " + JSON.stringify(typearr));
 	
 	    if ("inpstarttime" in changedProperties) {
@@ -544,7 +544,7 @@ console.log("/////////////// EOF : " + JSON.stringify(divid));
                 this.$inpstarttime = changedProperties["inpstarttime"];
             }
 
-	var startarr = this.$inpstarttime.split(';');
+	startarr = this.$inpstarttime.split(';');
 	console.log("task : " + JSON.stringify(startarr));	
 	
 	    if ("inpendtime" in changedProperties) {
@@ -552,7 +552,7 @@ console.log("/////////////// EOF : " + JSON.stringify(divid));
                 this.$inpendtime = changedProperties["inpendtime"];
             }
 
-	var endarr = this.$inpendtime.split(';');
+	endarr = this.$inpendtime.split(';');
 	console.log("task : " + JSON.stringify(endarr));	
 	
 	    if ("inpdetails" in changedProperties) {
@@ -560,7 +560,7 @@ console.log("/////////////// EOF : " + JSON.stringify(divid));
                 this.$inpdetails = changedProperties["inpdetails"];
             }
 
-	var detailsarr = this.$inpdetails.split(';');
+	detailsarr = this.$inpdetails.split(';');
 	console.log("task : " + JSON.stringify(detailsarr));
 		
 	console.log("%%%%%% INPUT %%%%%%");	
