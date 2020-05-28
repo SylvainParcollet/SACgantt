@@ -623,7 +623,7 @@ console.log("/////////////// EOF : " + JSON.stringify(shadroot));
                     'div': mapcanvas_divstr
                 });
 		console.log("@@@@@@@@ Ar   @@@@@@@@");
-		onsole.log(JSON.stringify(Ar[0].div));
+		console.log(JSON.stringify(Ar[0].div));
 				async function LoadLibs() {
 					try {
 						await loadScript(d3library);	
