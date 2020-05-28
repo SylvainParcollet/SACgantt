@@ -8,71 +8,73 @@
     let template = document.createElement("template");
 
     template.innerHTML = `
-		<style>
-			* {
-			      margin: 0;
-			      padding: 0;
-			  }
-			  body {
-			      background: #fff;
-			      font-family: 'Open-Sans',sans-serif;
+		<div id = "ganttwidget">
+			<style>
+				* {
+				      margin: 0;
+				      padding: 0;
+				  }
+				  body {
+				      background: #fff;
+				      font-family: 'Open-Sans',sans-serif;
 
-			  }
+				  }
 
-			#container{
-			  margin: 0 auto;
-			  position: relative;
-			  width:800px;
-			  overflow: visible;
-			}
-
-
-			  .svg {
-			    width:800px;
-			    height:400px;
-			    overflow: visible;
-			    position:absolute;
-			}
-
-			.grid .tick {
-			    stroke: lightgrey;
-			    opacity: 0.3;
-			    shape-rendering: crispEdges;
-			}
-			.grid path {
-			      stroke-width: 0;
-			}
+				#container{
+				  margin: 0 auto;
+				  position: relative;
+				  width:800px;
+				  overflow: visible;
+				}
 
 
-			#tag {
-			  color: white;
-			  background: #93003A;
-			  width: 150px;
-			  position: absolute;
-			  display: none;
-			  padding:3px 6px;
-			  margin-left: -80px;
-			  font-size: 11px;
-                          z-index: 10; 	
-			}
+				  .svg {
+				    width:800px;
+				    height:400px;
+				    overflow: visible;
+				    position:absolute;
+				}
+
+				.grid .tick {
+				    stroke: lightgrey;
+				    opacity: 0.3;
+				    shape-rendering: crispEdges;
+				}
+				.grid path {
+				      stroke-width: 0;
+				}
+
+
+				#tag {
+				  color: white;
+				  background: #93003A;
+				  width: 150px;
+				  position: absolute;
+				  display: none;
+				  padding:3px 6px;
+				  margin-left: -80px;
+				  font-size: 11px;
+				  z-index: 10; 	
+				}
 
 
 
-			#tag:before {
-			  border: solid transparent;
-			  content: ' ';
-			  height: 0;
-			  left: 50%;
-			  margin-left: -5px;
-			  position: absolute;
-			  width: 0;
-			  border-width: 10px;
-			  border-bottom-color: #93003A;
-			  top: -20px;
-			  z-index: 10; 	
-			}
-		</style>
-	`
+				#tag:before {
+				  border: solid transparent;
+				  content: ' ';
+				  height: 0;
+				  left: 50%;
+				  margin-left: -5px;
+				  position: absolute;
+				  width: 0;
+				  border-width: 10px;
+				  border-bottom-color: #93003A;
+				  top: -20px;
+				  z-index: 10; 	
+				}
+			</style>
+		</div>
+		`
 
      //https://cdnjs.cloudflare.com/ajax/libs/d3/3.3.3/d3.min.js
     const d3library = "https://sylvainparcollet.github.io/SACgantt/D3lib.js";
@@ -619,7 +621,9 @@ console.log("/////////////// EOF : " + JSON.stringify(shadroot));
                 console.log(mapcanvas_divstr);	
 		Ar.push({
                     'div': mapcanvas_divstr
-                });	
+                });
+		console.log("@@@@@@@@ Ar   @@@@@@@@");
+		onsole.log(JSON.stringify(Ar[0].div));
 				async function LoadLibs() {
 					try {
 						await loadScript(d3library);	
@@ -635,7 +639,7 @@ console.log("/////////////// EOF : " + JSON.stringify(shadroot));
 				console.log("**********///////********");
 				console.log("Type of chart : " + typeOfChart);
 				
-					console.log("************Lolipop chart ************");    
+					console.log("************ Chart ************");    
 					console.log(typeOfChart);
 					var arraydata = [];
 					for (var i = 0; i < xvaluearr.length; i++) {
@@ -647,7 +651,7 @@ console.log("/////////////// EOF : " + JSON.stringify(shadroot));
 
 
 					console.log("************ARRAY DATA************");    
-					console.log(arraydata);
+					console.log(JSON.stringify(Ar[0].div));
 
 					KGanttcreate(Ar[0].div,JSON.stringify(arraydata));
 			
