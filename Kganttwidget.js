@@ -120,6 +120,8 @@
   	var h = 400;
   	
 	console.log("/////////////// Kgantt chart : " + Ar[0].div);    
+	var ganttcanvas = document.getElementById("container");	    
+	console.log("/////////////// Kgantt chart : " + ganttcanvas);        
 	    
 //console.log("/////////////// D3 -1 : " + shadroot);    
 //var canvas = shadroot.getElementById("container");	
