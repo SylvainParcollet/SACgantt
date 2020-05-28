@@ -108,7 +108,7 @@
 	
 
     // Create the chart
-    function KGanttcreate(shadroot,value) {
+    function KGanttcreate(divid,value) {
 
         var data = {};
 		console.log("/////////////// Gantt - " + value);    
@@ -120,11 +120,11 @@
   var h = 400;
 	    
 	    
-console.log("/////////////// D3 -1 : " + shadroot);    
-var canvas = shadroot.getElementById("container");	
-console.log(canvas);
+//console.log("/////////////// D3 -1 : " + shadroot);    
+//var canvas = shadroot.getElementById("container");	
+//console.log(canvas);
    
-  var svg = d3.select(canvas)
+  var svg = d3.select(divid)
   .append("svg")
   .attr("width", w)
   .attr("height", h)
@@ -349,7 +349,7 @@ rectText.on('mouseover', function(e) {
 	
 	
          //SPACMNT var output = document.getElementById("tag");
-	 var output = shadroot.getElementById("tag");
+	 var output = document.getElementById("tag");
 	
           var x = this.x.animVal.getItem(canvas) + "px";
           var y = this.y.animVal.getItem(canvas) + 25 + "px";
@@ -360,7 +360,7 @@ rectText.on('mouseover', function(e) {
          output.style.display = "block";
        }).on('mouseout', function() {
          //SPACMNT var output = document.getElementById("tag");
-	 var output = shadroot.getElementById("tag");
+	 var output = document.getElementById("tag");
          output.style.display = "none";
              });
 
@@ -648,7 +648,9 @@ console.log("/////////////// EOF : " + JSON.stringify(shadroot));
 
 					console.log("************ARRAY DATA************");    
 					console.log(arraydata);
-					KGanttcreate(shadowRoot,JSON.stringify(arraydata));
+					var canvas = shadowRoot.getElementById("container");	
+					console.log(canvas);
+					KGanttcreate(canvas,JSON.stringify(arraydata));
 			
 		}
 	
