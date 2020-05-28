@@ -76,19 +76,6 @@
 
      //https://cdnjs.cloudflare.com/ajax/libs/d3/3.3.3/d3.min.js
     const d3library = "https://sylvainparcollet.github.io/SACgantt/D3lib.js";
-    //const Kganttlib = "https://sylvainparcollet.github.io/SACgantt/Kgantt.js";		
-    //https://www.amcharts.com/lib/4/core.js
-    //const amchartscorejs = "https://sylvainparcollet.github.io/amchartslib/core.js";
-    //https://www.amcharts.com/lib/4/charts.js
-    //const amchartschartsjs = "https://sylvainparcollet.github.io/amchartslib/charts.js";
-    //https://www.amcharts.com/lib/4/themes/animated.js
-    //const amchartsanimatedjs = "https://sylvainparcollet.github.io/amchartslib/animated.js";
-    //https://www.amcharts.com/lib/4/maps.js
-    //const amchartsmapsjs = "https://sylvainparcollet.github.io/amchartslib/maps.js";
-    //https://www.amcharts.com/lib/4/geodata/continentsLow.js
-    //const amchartscontinentlowjs = "https://sylvainparcollet.github.io/amchartslib/continentsLow.js";
-    //https://www.amcharts.com/lib/4/geodata/worldLow.js
-    //const amchartsworldlowjs = "https://sylvainparcollet.github.io/amchartslib/worldLow.js";
 
 	function loadScript(src) {
 	  return new Promise(function(resolve, reject) {
@@ -117,35 +104,20 @@
 				console.log(data);
 			}
 	var w = 800;
-  	var h = 400;
-	    
+  	var h = 400;	      	
+	console.log("/////////////// Kgantt chart : " + JSON.stringify(divid));    	    
+	console.log("/////////////// D3 -1 : " + divid);    
+	var canvas = divid.getElementById("kganttchart");	
+	console.log(canvas);
 
-  	
-console.log("/////////////// Kgantt chart : " + JSON.stringify(divid));    
-	    
-//console.log("/////////////// D3 -1 : " + );    
-//var canvas = shadroot.getElementById("container");	
-//console.log(canvas);
-console.log("/////////////// D3 -1 : " + divid);    
-var canvas = divid.getElementById("kganttchart");	
-console.log(canvas);
-   
-  var svg = d3.select(canvas)
-  .append("svg")
-  .attr("width", w)
-  .attr("height", h)
-  .attr("class", "svg");
+	  var svg = d3.select(canvas)
+	  .append("svg")
+	  .attr("width", w)
+	  .attr("height", h)
+	  .attr("class", "svg");
 
-	    /*
-var svg = d3.selectAll(divid)
-	.append("svg")
-	.attr("width", w)
-	.attr("height", h)
-	.attr("class", "svg");
-	
-	*/
-console.log("/////////////// D3 after : " + JSON.stringify(d3));    
-console.log("/////////////// A"); 
+	console.log("/////////////// D3 after : " + JSON.stringify(d3));    
+	console.log("/////////////// A"); 
     var taskArray = [
   {
     task: "conceptualize",
@@ -216,7 +188,8 @@ console.log("/////////////// A");
 
 ];
 console.log("/////////////// B"); 
-var dateFormat = d3.time.format("%Y-%m-%d");
+//var dateFormat = d3.time.format("%Y-%m-%d");
+var dateFormat = d3.time.format("%x");	    
 
 var timeScale = d3.time.scale()
         .domain([d3.min(taskArray, function(d) {return dateFormat.parse(d.startTime);}),
@@ -569,76 +542,46 @@ console.log("/////////////// EOF : " + JSON.stringify(divid));
 	div.innerHTML =  '<body><div id = "kganttchart"><div class = "svg"></div><div id = "tag"></div></div></body>';
 	shadowRoot.appendChild(div);
 	console.log(div);
-		//const css = document.createElement('div');
-		//css.innerhtml = '<style>*{margin: 0;padding: 0;}body{font-family:"Open-Sans",sans-serif;}#container{margin:0auto;position:relative;width:800px;height:400px;overflow:visible;}.svg{width:800px;height:400px;overflow:visible;position:absolute;}.grid.tick{stroke:lightgrey;opacity:0.3;shape-rendering:crispEdges;}.gridpath{stroke-width:0;}#tag{color:white;background:#FA283D;width:150px;position:absolute;display:none;padding:3px6px;margin-left:-80px;font-size:11px;}#tag:before{border:solidtransparent;content:"";height:0;left:50%;margin-left:-5px;position:absolute;width:0;border-width:10px;border-bottom-color:#FA283D;top:-20px;}</style>';	
-		//console.log("@@@@@@@@ CSS @@@@@@@@");
-		//console.log(css);
-		//shadowRoot.appendChild(css);
-			/*
-				const css = document.createElement('div');
-			
-				if (typeOfChart === "Sankey")
-				{
-					css.innerHTML = '<style>#chartdiv {margin:0 auto;width: 100%; height: 800px;overflow:hidden;}</style>'
-					console.log("@@@@@@@@ Sankey CSS  @@@@@@@@");		
-				}
-				else if (typeOfChart === "Map")
-				{
-					css.innerHTML = '<style>#chartdiv {max-width: 100%;height: 800px;background-color:#fbebdb;}</style>'
-					console.log("@@@@@@@@ Map css  @@@@@@@@");						
-				}
-				else if (typeOfChart === "Radar")
-				{
-					css.innerHTML = '<style>#chartdiv {max-width: 100%;width: 100%;height: 800px;background-color:#5f6062;}</style>'
-					console.log("@@@@@@@@ Radar css  @@@@@@@@");						
-				}
-				else				
-				{
-				
-					css.innerHTML = '<style>#container{margin:0auto;position:relative;width:800px;height:400px;overflow:visible;}.svg{width:800px;height:400px;overflow:visible;position:absolute;}.grid.tick{stroke:lightgrey;opacity:0.3;shape-rendering:crispEdges;}.gridpath{stroke-width:0;}#tag{color:white;background:#FA283D;width:150px;position:absolute;display:none;padding:3px6px;margin-left:-80px;font-size:11px;}#tag:before{border:solidtransparent;content:"";height:0;left:50%;margin-left:-5px;position:absolute;width:0;border-width:10px;border-bottom-color:#FA283D;top:-20px;}</style>';
-					//css.innerHTML = '<style>#container{margin:0auto;position:relative;width:800px;height:400px;overflow:visible;}</style>'
-					console.log("@@@@@@@@ XYChart CSS  @@@@@@@@");		
-				*/
-	
-		console.log("@@@@@@@@ Shadow Root   @@@@@@@@");
-		console.log(shadowRoot);
-		var mapcanvas_divstr = shadowRoot.getElementById("kganttchart");	
-                console.log(mapcanvas_divstr);	
-		Ar.push({
-                    'div': mapcanvas_divstr
-                });
-		console.log("@@@@@@@@ Ar   @@@@@@@@");
-		console.log(Ar[0].div);
-				async function LoadLibs() {
-					try {
-						await loadScript(d3library);	
-						//await loadScript(Kganttlib);
-					} catch (e) {
-						alert(e);
-					} finally {	
-						that._firstConnection = 1;	
-					}
-				}
-				LoadLibs();
-		} else {		
-				console.log("**********///////********");
-				console.log("Dataset : " + dataset);
-				
-					console.log("************ Chart ************");    
-					console.log(dataset);
-					var arraydata = [];
-					for (var i = 0; i < xvaluearr.length; i++) {
-						arraydata.push({
-							"category": xvaluearr[i],
-							"value": parseInt(yvaluearr[i])
-						});
-					}
+
+	console.log("@@@@@@@@ Shadow Root   @@@@@@@@");
+	console.log(shadowRoot);
+	var mapcanvas_divstr = shadowRoot.getElementById("kganttchart");	
+	console.log(mapcanvas_divstr);	
+	Ar.push({
+	'div': mapcanvas_divstr
+	});
+	console.log("@@@@@@@@ Ar   @@@@@@@@");
+	console.log(Ar[0].div);
+		async function LoadLibs() {
+			try {
+				await loadScript(d3library);	
+				//await loadScript(Kganttlib);
+			} catch (e) {
+				alert(e);
+			} finally {	
+				that._firstConnection = 1;	
+			}
+		}
+		LoadLibs();
+	} else {		
+		console.log("**********///////********");
+		console.log("Dataset : " + dataset);
+
+			console.log("************ Chart ************");    
+			console.log(dataset);
+			var arraydata = [];
+			for (var i = 0; i < xvaluearr.length; i++) {
+				arraydata.push({
+					"category": xvaluearr[i],
+					"value": parseInt(yvaluearr[i])
+				});
+			}
 
 
-					console.log("************ARRAY DATA************");    
-               				console.log(shadowRoot);	
+			console.log("************ARRAY DATA************");    
+			console.log(shadowRoot);	
 
-					KGanttcreate(shadowRoot,JSON.stringify(arraydata));
+			KGanttcreate(shadowRoot,JSON.stringify(arraydata));
 			
 		}			
         }
