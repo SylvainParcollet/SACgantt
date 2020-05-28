@@ -500,7 +500,7 @@ console.log("/////////////// EOF : " + JSON.stringify(divid));
     class Kganttmain extends HTMLElement {
         constructor() {
 	    console.log("-------------------------------------------------");	
-        console.log("constructor");
+            console.log("constructor");
 	    console.log("-------------------------------------------------");	
             super();
             shadowRoot = this.attachShadow({
@@ -521,13 +521,13 @@ console.log("/////////////// EOF : " + JSON.stringify(divid));
         }
 
         //Fired when the widget is added to the html DOM of the page
-		connectedCallback() {
+	connectedCallback() {
             console.log("connectedCallback");
         }
 
 		//Fired when the widget is removed from the html DOM of the page (e.g. by hide)
 		disconnectedCallback() {
-			console.log("disconnectedCallback");
+		console.log("disconnectedCallback");
         }
 
 		//When the custom widget is updated, the Custom Widget SDK framework executes this function first
@@ -547,44 +547,28 @@ console.log("/////////////// EOF : " + JSON.stringify(divid));
 
 	   console.log("%%%%%% INPUT %%%%%%");	
 
-            if ("charttype" in changedProperties) {
-                console.log("charttype:" + changedProperties["charttype"]);
-                this.$charttype = changedProperties["charttype"];
+            if ("dataset" in changedProperties) {
+                console.log("dataset: " + changedProperties["dataset"]);
+                this.$dataset = changedProperties["dataset"];
             }
 
-		
-			if ("xvalue" in changedProperties) {
-					console.log("xvalue:" + changedProperties["xvalue"]);
-					this.$xvalue = changedProperties["xvalue"];
-
-			}
-				
-			if ("yvalue" in changedProperties) {
-					console.log("yvalue:" + changedProperties["yvalue"]);
-					this.$yvalue = changedProperties["yvalue"];
-
-			}
 				
 
-			var typeOfChart = this.$charttype;
-			console.log("Type of chart : " + typeOfChart);	
-			xvaluearr = this.$xvalue.split(';');
-			console.log(xvaluearr);		
-			yvaluearr = this.$yvalue.split(';');
-			console.log(yvaluearr);	
-			console.log("%%%%%% INPUT %%%%%%");	
-            console.log("firsttime: " + this._firstConnection);
-            var that = this;
+	var dataset = this.$dataset;
+	console.log("Dataset : " + dataset);	
+	console.log("%%%%%% INPUT %%%%%%");	
+	console.log("firsttime: " + this._firstConnection);
+	var that = this;
 
-		if (this._firstConnection === 0) {
-			
-		console.log("@@@@@@@@  html @@@@@@@@");	
-		const div = document.createElement('div');
-                let divid = changedProperties.widgetName;
-                this._tagContainer = divid;
-                div.innerHTML =  '<body><div id = "kganttchart"><div class = "svg"></div><div id = "tag"></div></div></body>';
-                shadowRoot.appendChild(div);
-		console.log(div);
+	if (this._firstConnection === 0) {
+
+	console.log("@@@@@@@@  html @@@@@@@@");	
+	const div = document.createElement('div');
+	let divid = changedProperties.widgetName;
+	this._tagContainer = divid;
+	div.innerHTML =  '<body><div id = "kganttchart"><div class = "svg"></div><div id = "tag"></div></div></body>';
+	shadowRoot.appendChild(div);
+	console.log(div);
 		//const css = document.createElement('div');
 		//css.innerhtml = '<style>*{margin: 0;padding: 0;}body{font-family:"Open-Sans",sans-serif;}#container{margin:0auto;position:relative;width:800px;height:400px;overflow:visible;}.svg{width:800px;height:400px;overflow:visible;position:absolute;}.grid.tick{stroke:lightgrey;opacity:0.3;shape-rendering:crispEdges;}.gridpath{stroke-width:0;}#tag{color:white;background:#FA283D;width:150px;position:absolute;display:none;padding:3px6px;margin-left:-80px;font-size:11px;}#tag:before{border:solidtransparent;content:"";height:0;left:50%;margin-left:-5px;position:absolute;width:0;border-width:10px;border-bottom-color:#FA283D;top:-20px;}</style>';	
 		//console.log("@@@@@@@@ CSS @@@@@@@@");
@@ -638,10 +622,10 @@ console.log("/////////////// EOF : " + JSON.stringify(divid));
 				LoadLibs();
 		} else {		
 				console.log("**********///////********");
-				console.log("Type of chart : " + typeOfChart);
+				console.log("Dataset : " + dataset);
 				
 					console.log("************ Chart ************");    
-					console.log(typeOfChart);
+					console.log(dataset);
 					var arraydata = [];
 					for (var i = 0; i < xvaluearr.length; i++) {
 						arraydata.push({
