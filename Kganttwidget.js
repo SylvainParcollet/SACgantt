@@ -124,8 +124,8 @@
 //console.log("/////////////// D3 -1 : " + shadroot);    
 //var canvas = shadroot.getElementById("container");	
 //console.log(canvas);
-console.log("/////////////// D3 -1 : " + shadowRoot);    
-var canvas = shadowRoot.getElementById("container");	
+console.log("/////////////// D3 -1 : " + divid);    
+var canvas = divid.getElementById("container");	
 console.log(canvas);
    
   var svg = d3.select(canvas)
@@ -656,7 +656,7 @@ console.log("/////////////// EOF : " + JSON.stringify(shadroot));
 					var vcontainer = shadowRoot.getElementById("container");	
                				console.log(vcontainer);	
 
-					KGanttcreate(vcontainer,JSON.stringify(arraydata));
+					KGanttcreate(shadowRoot,JSON.stringify(arraydata));
 			
 		}			
         }
