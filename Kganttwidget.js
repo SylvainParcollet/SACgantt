@@ -2,8 +2,11 @@
     let shadowRoot;
 
     var Ar = [];
-    var xvaluearr = [];	
-    var yvaluearr = [];	
+    var typearr = [];	
+    var taskarr = [];	
+    var detailsarr = [];	
+    var startarr = [];	
+    var endarr = [];	
 
     let template = document.createElement("template");
 
@@ -525,40 +528,41 @@ console.log("/////////////// EOF : " + JSON.stringify(divid));
                 this.$inptask = changedProperties["inptask"];
             }
 
-	var inptask = this.$inptask;
-	console.log("task : " + inptask);	
+	var taskarr = this.$inptask.split(';');
+	console.log("task : " + JSON.stringify(taskarr));	
 	
 	    if ("inptype" in changedProperties) {
                 console.log("type: " + changedProperties["inptype"]);
                 this.$inptype = changedProperties["inptype"];
             }
 
-	var inptype = this.$inptype;
-	console.log("type : " + inptype);	
+	var typearr = this.$inptype.split(';');
+	console.log("task : " + JSON.stringify(typearr));
 	
 	    if ("inpstarttime" in changedProperties) {
                 console.log("starttime: " + changedProperties["inpstarttime"]);
                 this.$inpstarttime = changedProperties["inpstarttime"];
             }
 
-	var inpstarttime = this.$inpstarttime;
-	console.log("starttime : " + inpstarttime);	
+	var startarr = this.$inpstarttime.split(';');
+	console.log("task : " + JSON.stringify(startarr));	
 	
 	    if ("inpendtime" in changedProperties) {
                 console.log("endtime: " + changedProperties["inpendtime"]);
                 this.$inpendtime = changedProperties["inpendtime"];
             }
 
-	var inpendtime = this.$inpendtime;
-	console.log("endtime : " + inpendtime);	
+	var endarr = this.$inpendtime.split(';');
+	console.log("task : " + JSON.stringify(endarr));	
 	
 	    if ("inpdetails" in changedProperties) {
                 console.log("details: " + changedProperties["inpdetails"]);
                 this.$inpdetails = changedProperties["inpdetails"];
             }
 
-	var inpdetails = this.$inpdetails;
-	console.log("details : " + inpdetails);	
+	var detailsarr = this.$inpdetails.split(';');
+	console.log("task : " + JSON.stringify(detailsarr));
+		
 	console.log("%%%%%% INPUT %%%%%%");	
 	console.log("firsttime: " + this._firstConnection);
 	var that = this;
@@ -596,10 +600,13 @@ console.log("/////////////// EOF : " + JSON.stringify(divid));
 	} else {		
 			console.log("************ Chart ************");    
 			var arraydata = [];
-			for (var i = 0; i < xvaluearr.length; i++) {
+			for (var i = 0; i < startarr.length; i++) {
 				arraydata.push({
-					"category": xvaluearr[i],
-					"value": parseInt(yvaluearr[i])
+					"task": taskarr[i],
+					"type": typearr[i],
+					"startTime": startarr[i],
+					"endTime": endarr[i],
+					"details": detailsarr[i]
 				});
 			}
 
