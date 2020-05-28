@@ -648,9 +648,8 @@ console.log("/////////////// EOF : " + JSON.stringify(shadroot));
 
 					console.log("************ARRAY DATA************");    
 					console.log(arraydata);
-					var canvas = shadowRoot.getElementById("container");	
-					console.log(canvas);
-					KGanttcreate(canvas,JSON.stringify(arraydata));
+
+					KGanttcreate(Ar[0].div,JSON.stringify(arraydata));
 			
 		}
 	
