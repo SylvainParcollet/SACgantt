@@ -18,19 +18,9 @@
 		}
 	],
 	"properties": {
-		"charttype": {
+		"dataset": {
 			"type": "string",
 			"description": "charttype",
-			"default": ""
-		},
-		"xvalue": {
-			"type": "string",
-			"description": "xvalue",
-			"default": ""
-		},
-    "yvalue": {
-			"type": "string",
-			"description": "yvalue",
 			"default": ""
 		},
 		"width": {
@@ -47,22 +37,12 @@
 			"description": "Params for chart.",
 			"parameters": [
 				{
-					"name": "newcharttype",
+					"name": "newdataset",
 					"type": "string",
-					"description": "Chart type"
-				},
-				{
-					"name": "newxvalue",
-					"type": "string",
-					"description": "xvalue"
-				},
-        {
-					"name": "newyvalue",
-					"type": "string",
-					"description": "yvalue"
+					"description": "Dataset"
 				}
 			],
-			"body": "this.charttype = newcharttype; this.xvalue = newxvalue;this.yvalue = newyvalue;"
+			"body": "this.dataset = newdataset;"
 		},
 		"getCharttype": {
 			"returnType": "string",
