@@ -520,15 +520,45 @@ console.log("/////////////// EOF : " + JSON.stringify(divid));
 
 	   console.log("%%%%%% INPUT %%%%%%");	
 
-            if ("dataset" in changedProperties) {
-                console.log("dataset: " + changedProperties["dataset"]);
-                this.$dataset = changedProperties["dataset"];
+            if ("task" in changedProperties) {
+                console.log("task: " + changedProperties["task"]);
+                this.$task = changedProperties["task"];
             }
 
-				
+	var task = this.$task;
+	console.log("task : " + task);	
+	
+	    if ("type" in changedProperties) {
+                console.log("type: " + changedProperties["type"]);
+                this.$type = changedProperties["type"];
+            }
 
-	var dataset = this.$dataset;
-	console.log("Dataset : " + dataset);	
+	var type = this.$type;
+	console.log("type : " + type);	
+	
+	    if ("starttime" in changedProperties) {
+                console.log("starttime: " + changedProperties["starttime"]);
+                this.$starttime = changedProperties["starttime"];
+            }
+
+	var starttime = this.$starttime;
+	console.log("starttime : " + starttime);	
+	
+	    if ("endtime" in changedProperties) {
+                console.log("endtime: " + changedProperties["endtime"]);
+                this.$endtime = changedProperties["endtime"];
+            }
+
+	var endtime = this.$endtime;
+	console.log("endtime : " + endtime);	
+	
+	    if ("details" in changedProperties) {
+                console.log("details: " + changedProperties["details"]);
+                this.$details = changedProperties["details"];
+            }
+
+	var details = this.$details;
+	console.log("details : " + details);	
 	console.log("%%%%%% INPUT %%%%%%");	
 	console.log("firsttime: " + this._firstConnection);
 	var that = this;
@@ -564,11 +594,7 @@ console.log("/////////////// EOF : " + JSON.stringify(divid));
 		}
 		LoadLibs();
 	} else {		
-		console.log("**********///////********");
-		console.log("Dataset : " + dataset);
-
 			console.log("************ Chart ************");    
-			console.log(dataset);
 			var arraydata = [];
 			for (var i = 0; i < xvaluearr.length; i++) {
 				arraydata.push({
@@ -576,7 +602,6 @@ console.log("/////////////// EOF : " + JSON.stringify(divid));
 					"value": parseInt(yvaluearr[i])
 				});
 			}
-
 
 			console.log("************ARRAY DATA************");    
 			console.log(shadowRoot);	
