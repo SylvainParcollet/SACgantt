@@ -353,7 +353,7 @@ rectText.on('mouseover', function(e) {
 	
 	
          //SPACMNT var output = document.getElementById("tag");
-	 var output = document.getElementById("tag");
+	 var output = divid.getElementById("tag");
 	
           var x = this.x.animVal.getItem(canvas) + "px";
           var y = this.y.animVal.getItem(canvas) + 25 + "px";
@@ -364,7 +364,7 @@ rectText.on('mouseover', function(e) {
          output.style.display = "block";
        }).on('mouseout', function() {
          //SPACMNT var output = document.getElementById("tag");
-	 var output = document.getElementById("tag");
+	 var output = divid.getElementById("tag");
          output.style.display = "none";
              });
 
@@ -386,7 +386,7 @@ console.log("/////////////// Mouse ON B");
                 "Ends: " + d3.select(this).data()[0].endTime;
          }
          //SPACMNT var output = document.getElementById("tag");
-	 var output = shadroot.getElementById("tag");
+	 var output = divid.getElementById("tag");
 
          var x = (this.x.animVal.value + this.width.animVal.value/2) + "px";
          var y = this.y.animVal.value + 25 + "px";
@@ -495,7 +495,7 @@ function getCount(word, arr) {
     return getCounts(arr)[word] || 0;
 }
 	    
-console.log("/////////////// EOF : " + JSON.stringify(shadroot)); 	    
+console.log("/////////////// EOF : " + JSON.stringify(divid)); 	    
     };	
 
     class Kganttmain extends HTMLElement {
