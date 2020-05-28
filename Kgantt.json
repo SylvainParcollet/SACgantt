@@ -43,11 +43,6 @@
 				}
 			],
 			"body": "this.dataset = newdataset;"
-		},
-		"getCharttype": {
-			"returnType": "string",
-			"description": "Returns the type of chart.",
-			"body": "return this.charttype;"
 		}
 	},
 	"events": {
