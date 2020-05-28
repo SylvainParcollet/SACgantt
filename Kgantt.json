@@ -18,9 +18,29 @@
 		}
 	],
 	"properties": {
-		"dataset": {
+		"task": {
 			"type": "string",
-			"description": "dataset",
+			"description": "task",
+			"default": ""
+		},
+		"type": {
+			"type": "string",
+			"description": "type",
+			"default": ""
+		},
+		"starttime": {
+			"type": "string",
+			"description": "starttime",
+			"default": ""
+		},
+		"endtime": {
+			"type": "string",
+			"description": "endtime",
+			"default": ""
+		},
+		"details": {
+			"type": "string",
+			"description": "details",
 			"default": ""
 		},
 		"width": {
@@ -37,12 +57,32 @@
 			"description": "Params for chart.",
 			"parameters": [
 				{
-					"name": "newdataset",
+					"name": "newtask",
 					"type": "string",
-					"description": "Dataset"
+					"description": "Task"
+				},
+				{
+					"name": "newtype",
+					"type": "string",
+					"description": "Type"
+				},
+				{
+					"name": "newstarttime",
+					"type": "string",
+					"description": "Start time"
+				},
+				{
+					"name": "newendtime",
+					"type": "string",
+					"description": "End time"
+				},
+				{
+					"name": "newdetails",
+					"type": "string",
+					"description": "Details"
 				}
 			],
-			"body": "this.dataset = newdataset;"
+			"body": "this.task = newtask;this.type = newtype;this.starttime = newstarttime;this.endtime = newendtime;this.details = newdetails;"
 		}
 	},
 	"events": {
