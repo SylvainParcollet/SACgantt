@@ -124,8 +124,11 @@
 //console.log("/////////////// D3 -1 : " + shadroot);    
 //var canvas = shadroot.getElementById("container");	
 //console.log(canvas);
+console.log("/////////////// D3 -1 : " + shadowRoot);    
+var canvas = shadowRoot.getElementById("container");	
+console.log(canvas);
    
-  var svg = d3.select(divid)
+  var svg = d3.select(canvas)
   .append("svg")
   .attr("width", w)
   .attr("height", h)
