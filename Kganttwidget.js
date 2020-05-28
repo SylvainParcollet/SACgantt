@@ -118,9 +118,10 @@
 				data = JSON.parse(value);
 				console.log(data);
 			}
-		var w = 800;
-  var h = 400;
-	    
+	var w = 800;
+  	var h = 400;
+  	
+	console.log("/////////////// Kgantt chart : " + divid);    
 	    
 //console.log("/////////////// D3 -1 : " + shadroot);    
 //var canvas = shadroot.getElementById("container");	
@@ -651,7 +652,7 @@ console.log("/////////////// EOF : " + JSON.stringify(shadroot));
 
 
 					console.log("************ARRAY DATA************");    
-					console.log(JSON.stringify(Ar[0].div));
+					console.log(Ar[0].div);
 
 					KGanttcreate(Ar[0].div,JSON.stringify(arraydata));
 			
@@ -659,8 +660,8 @@ console.log("/////////////// EOF : " + JSON.stringify(shadroot));
         }
 
 		//When the custom widget is removed from the canvas or the analytic application is closed
-        onCustomWidgetDestroy() {
-			console.log("onCustomWidgetDestroy");
+        	onCustomWidgetDestroy() {
+		console.log("onCustomWidgetDestroy");
         }
     }
     customElements.define("com-karamba-kgantt", Kganttmain);
