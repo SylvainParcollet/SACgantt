@@ -119,15 +119,13 @@
 	var w = 800;
   	var h = 400;
   	
-	console.log("/////////////// Kgantt chart : " + Ar[0].div);    
-	var ganttcanvas = this.shadowRoot.getElementById("container");	    
-	console.log("/////////////// Kgantt chart : " + ganttcanvas);        
+	console.log("/////////////// Kgantt chart : " + divid);    
 	    
 //console.log("/////////////// D3 -1 : " + shadroot);    
 //var canvas = shadroot.getElementById("container");	
 //console.log(canvas);
    
-  var svg = d3.select(Ar[0].div)
+  var svg = d3.select(divid)
   .append("svg")
   .attr("width", w)
   .attr("height", h)
@@ -652,9 +650,10 @@ console.log("/////////////// EOF : " + JSON.stringify(shadroot));
 
 
 					console.log("************ARRAY DATA************");    
-					console.log(Ar[0].div);
+					var vcontainer = shadowRoot.getElementById("container");	
+               				console.log(vcontainer);	
 
-					KGanttcreate(Ar[0].div,JSON.stringify(arraydata));
+					KGanttcreate(vcontainer,JSON.stringify(arraydata));
 			
 		}			
         }
