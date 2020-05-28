@@ -20,7 +20,7 @@
 	"properties": {
 		"dataset": {
 			"type": "string",
-			"description": "charttype",
+			"description": "dataset",
 			"default": ""
 		},
 		"width": {
