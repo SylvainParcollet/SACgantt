@@ -125,7 +125,7 @@
 //var canvas = shadroot.getElementById("container");	
 //console.log(canvas);
 console.log("/////////////// D3 -1 : " + divid);    
-var canvas = divid.getElementById("container");	
+var canvas = divid.getElementById("kganttchart");	
 console.log(canvas);
    
   var svg = d3.select(canvas)
@@ -580,7 +580,7 @@ console.log("/////////////// EOF : " + JSON.stringify(divid));
 		const div = document.createElement('div');
                 let divid = changedProperties.widgetName;
                 this._tagContainer = divid;
-                div.innerHTML =  '<body><div id = "container"><div class = "svg"></div><div id = "tag"></div></div></body>';
+                div.innerHTML =  '<body><div id = "kganttchart"><div class = "svg"></div><div id = "tag"></div></div></body>';
                 shadowRoot.appendChild(div);
 		console.log(div);
 		//const css = document.createElement('div');
@@ -616,7 +616,7 @@ console.log("/////////////// EOF : " + JSON.stringify(divid));
 	
 		console.log("@@@@@@@@ Shadow Root   @@@@@@@@");
 		console.log(shadowRoot);
-		var mapcanvas_divstr = shadowRoot.getElementById("container");	
+		var mapcanvas_divstr = shadowRoot.getElementById("kganttchart");	
                 console.log(mapcanvas_divstr);	
 		Ar.push({
                     'div': mapcanvas_divstr
@@ -650,7 +650,7 @@ console.log("/////////////// EOF : " + JSON.stringify(divid));
 
 
 					console.log("************ARRAY DATA************");    
-					var vcontainer = shadowRoot.getElementById("container");	
+					var vcontainer = shadowRoot.getElementById("kganttchart");	
                				console.log(vcontainer);	
 
 					KGanttcreate(shadowRoot,JSON.stringify(arraydata));
