@@ -118,14 +118,18 @@
 			}
 	var w = 800;
   	var h = 400;
+	    
+	 vcontainer = this.attachShadow({
+                mode: "open"
+            });   
   	
-	console.log("/////////////// Kgantt chart : " + JSON.stringify(divid));    
+console.log("/////////////// Kgantt chart : " + JSON.stringify(divid));    
 	    
 //console.log("/////////////// D3 -1 : " + );    
 //var canvas = shadroot.getElementById("container");	
 //console.log(canvas);
-console.log("/////////////// D3 -1 : " + divid);    
-var canvas = divid.getElementById("kganttchart");	
+console.log("/////////////// D3 -1 : " + vcontainer);    
+var canvas = vcontainer.getElementById("kganttchart");	
 console.log(canvas);
    
   var svg = d3.select(canvas)
@@ -294,8 +298,8 @@ var bigRects = svg.append("g")
      .data(theArray)
      .enter();
 
-console.log("/////////////// D"); 
-   var innerRects = rectangles.append("rect")
+     console.log("/////////////// D"); 
+     var innerRects = rectangles.append("rect")
              .attr("rx", 3)
              .attr("ry", 3)
              .attr("x", function(d){
@@ -650,8 +654,7 @@ console.log("/////////////// EOF : " + JSON.stringify(divid));
 
 
 					console.log("************ARRAY DATA************");    
-					var vcontainer = shadowRoot.getElementById("kganttchart");	
-               				console.log(vcontainer);	
+               				console.log(shadowRoot);	
 
 					KGanttcreate(shadowRoot,JSON.stringify(arraydata));
 			
