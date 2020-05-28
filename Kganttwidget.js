@@ -119,7 +119,7 @@
 	var w = 800;
   	var h = 400;
   	
-	console.log("/////////////// Kgantt chart : " + divid);    
+	console.log("/////////////// Kgantt chart : " + JSON.stringify(divid));    
 	    
 //console.log("/////////////// D3 -1 : " + shadroot);    
 //var canvas = shadroot.getElementById("container");	
