@@ -18,27 +18,27 @@
 		}
 	],
 	"properties": {
-		"task": {
+		"inptask": {
 			"type": "string",
 			"description": "task",
 			"default": ""
 		},
-		"type": {
+		"inptype": {
 			"type": "string",
 			"description": "type",
 			"default": ""
 		},
-		"starttime": {
+		"inpstarttime": {
 			"type": "string",
 			"description": "starttime",
 			"default": ""
 		},
-		"endtime": {
+		"inpendtime": {
 			"type": "string",
 			"description": "endtime",
 			"default": ""
 		},
-		"details": {
+		"inpdetails": {
 			"type": "string",
 			"description": "details",
 			"default": ""
@@ -57,32 +57,32 @@
 			"description": "Params for chart.",
 			"parameters": [
 				{
-					"name": "newtask",
+					"name": "newinptask",
 					"type": "string",
 					"description": "Task"
 				},
 				{
-					"name": "newtype",
+					"name": "newinptype",
 					"type": "string",
 					"description": "Type"
 				},
 				{
-					"name": "newstarttime",
+					"name": "newinpstarttime",
 					"type": "string",
 					"description": "Start time"
 				},
 				{
-					"name": "newendtime",
+					"name": "newinpendtime",
 					"type": "string",
 					"description": "End time"
 				},
 				{
-					"name": "newdetails",
+					"name": "newinpdetails",
 					"type": "string",
 					"description": "Details"
 				}
 			],
-			"body": "this.task = newtask;this.type = newtype;this.starttime = newstarttime;this.endtime = newendtime;this.details = newdetails;"
+			"body": "this.inptask = newinptask;this.inptype = newinptype;this.inpstarttime = newinpstarttime;this.inpendtime = newinpendtime;this.inpdetails = newinpdetails;"
 		}
 	},
 	"events": {
