@@ -528,40 +528,40 @@ console.log("/////////////// EOF : " + JSON.stringify(divid));
                 this.$inptask = changedProperties["inptask"];
             }
 
-	taskarr = this.$inptask.split(';');
-	console.log("task : " + JSON.stringify(taskarr));	
+	//taskarr = this.$inptask.split(';');
+	//console.log("task : " + JSON.stringify(taskarr));	
 	
 	    if ("inptype" in changedProperties) {
                 console.log("type: " + changedProperties["inptype"]);
                 this.$inptype = changedProperties["inptype"];
             }
 
-	typearr = this.$inptype.split(';');
-	console.log("task : " + JSON.stringify(typearr));
+	//typearr = this.$inptype.split(';');
+	//console.log("task : " + JSON.stringify(typearr));
 	
 	    if ("inpstarttime" in changedProperties) {
                 console.log("starttime: " + changedProperties["inpstarttime"]);
                 this.$inpstarttime = changedProperties["inpstarttime"];
             }
 
-	startarr = this.$inpstarttime.split(';');
-	console.log("task : " + JSON.stringify(startarr));	
+	//startarr = this.$inpstarttime.split(';');
+	//console.log("task : " + JSON.stringify(startarr));	
 	
 	    if ("inpendtime" in changedProperties) {
                 console.log("endtime: " + changedProperties["inpendtime"]);
                 this.$inpendtime = changedProperties["inpendtime"];
             }
 
-	endarr = this.$inpendtime.split(';');
-	console.log("task : " + JSON.stringify(endarr));	
+	//endarr = this.$inpendtime.split(';');
+	//console.log("task : " + JSON.stringify(endarr));	
 	
 	    if ("inpdetails" in changedProperties) {
                 console.log("details: " + changedProperties["inpdetails"]);
                 this.$inpdetails = changedProperties["inpdetails"];
             }
 
-	detailsarr = this.$inpdetails.split(';');
-	console.log("task : " + JSON.stringify(detailsarr));
+	//detailsarr = this.$inpdetails.split(';');
+	//console.log("task : " + JSON.stringify(detailsarr));
 		
 	console.log("%%%%%% INPUT %%%%%%");	
 	console.log("firsttime: " + this._firstConnection);
