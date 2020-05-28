@@ -121,7 +121,7 @@
   	
 	console.log("/////////////// Kgantt chart : " + JSON.stringify(divid));    
 	    
-//console.log("/////////////// D3 -1 : " + shadroot);    
+//console.log("/////////////// D3 -1 : " + );    
 //var canvas = shadroot.getElementById("container");	
 //console.log(canvas);
 console.log("/////////////// D3 -1 : " + divid);    
@@ -397,13 +397,10 @@ console.log("/////////////// Mouse ON B");
          output.style.display = "block";
        }).on('mouseout', function() {
          //SPACMNT var output = document.getElementById("tag");
-	 var output = shadroot.getElementById("tag");
+	 var output = divid.getElementById("tag");
          output.style.display = "none";
 
  });
-
-
-
 }
 
 console.log("/////////////// G"); 
