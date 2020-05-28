@@ -119,17 +119,15 @@
 	var w = 800;
   	var h = 400;
 	    
-	 vcontainer = this.attachShadow({
-                mode: "open"
-            });   
+
   	
 console.log("/////////////// Kgantt chart : " + JSON.stringify(divid));    
 	    
 //console.log("/////////////// D3 -1 : " + );    
 //var canvas = shadroot.getElementById("container");	
 //console.log(canvas);
-console.log("/////////////// D3 -1 : " + vcontainer);    
-var canvas = vcontainer.getElementById("kganttchart");	
+console.log("/////////////// D3 -1 : " + divid);    
+var canvas = divid.getElementById("kganttchart");	
 console.log(canvas);
    
   var svg = d3.select(canvas)
