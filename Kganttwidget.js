@@ -25,14 +25,14 @@
 				#container{
 				  margin: 0 auto;
 				  position: relative;
-				  width:800px;
+				  width:1200px;
 				  overflow: visible;
 				}
 
 
 				  .svg {
-				    width:800px;
-				    height:400px;
+				    width:1200px;
+				    height:600px;
 				    overflow: visible;
 				    position:absolute;
 				}
