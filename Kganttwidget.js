@@ -121,6 +121,8 @@
 
 	console.log("/////////////// D3 after : " + JSON.stringify(d3));    
 	console.log("/////////////// A"); 
+	     var taskArray = value;
+	    /*
     var taskArray = [
   {
     task: "conceptualize",
@@ -190,6 +192,7 @@
 },
 
 ];
+*/
 console.log("/////////////// B"); 
 var dateFormat = d3.time.format("%Y-%m-%d");
 //var dateFormat = d3.time.format("%d-%m-%Y");	    
