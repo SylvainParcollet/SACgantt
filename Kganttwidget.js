@@ -119,7 +119,7 @@
 	    
 	var taskArray = [];		
 			for (var i = 0; i < startarr.length; i++) {
-				arraydata.push({
+				taskArray.push({
 					"task": taskarr[i],
 					"type": typearr[i],
 					"startTime": startarr[i],
