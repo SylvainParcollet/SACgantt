@@ -98,14 +98,8 @@
 	
 
     // Create the chart
-    function KGanttcreate(divid,value) {
+    function KGanttcreate(divid) {
 
-        var data = {};
-		console.log("/////////////// Gantt - " + value);    
-			if (value !== "") {
-				data = JSON.parse(value);
-				console.log(data);
-			}
 	var w = 800;
   	var h = 400;	      	
 	console.log("/////////////// Kgantt chart : " + JSON.stringify(divid));    	    
@@ -628,9 +622,9 @@ console.log("/////////////// EOF : " + JSON.stringify(divid));
 			
 
 			console.log("************ARRAY DATA************");    
-			console.log(JSON.stringify(arraydata));	
+			
 
-			KGanttcreate(shadowRoot,JSON.stringify(arraydata));
+			KGanttcreate(shadowRoot);
 			
 		}			
         }
