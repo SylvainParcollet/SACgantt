@@ -528,10 +528,7 @@ console.log("/////////////// EOF : " + JSON.stringify(divid));
                 this.$inptask = changedProperties["inptask"];
             }
 
-	var taskchar = 	this.$inptask;
-	console.log("%%%%%% task %%%%%%");	
-	console.log("task : " + taskchar);		
-	taskarr = taskchar.split(';');	
+	
 	//taskarr = this.$inptask.split(';');
 	//console.log("task : " + JSON.stringify(taskarr));	
 	
@@ -613,7 +610,10 @@ console.log("/////////////// EOF : " + JSON.stringify(divid));
 					"details": detailsarr[i]
 				});
 			}
-
+			var taskchar = 	this.$inptask;
+			console.log("%%%%%% task %%%%%%");	
+			console.log("task : " + taskchar);		
+			taskarr = taskchar.split(';');
 			console.log("************ARRAY DATA************");    
 			console.log(shadowRoot);	
 
