@@ -121,7 +121,24 @@
 
 	console.log("/////////////// D3 after : " + JSON.stringify(d3));    
 	console.log("/////////////// A"); 
-	     var taskArray = value;
+	
+	    
+	var taskArray = [];		
+			for (var i = 0; i < startarr.length; i++) {
+				arraydata.push({
+					"task": taskarr[i],
+					"type": typearr[i],
+					"startTime": startarr[i],
+					"endTime": endarr[i],
+					"details": detailsarr[i]
+				});
+			}    
+	    
+	    
+	    
+	    
+	    
+console.log("---- taskarray " + taskArray);
 	    /*
     var taskArray = [
   {
@@ -608,16 +625,7 @@ console.log("/////////////// EOF : " + JSON.stringify(divid));
 			startarr = this.$inpstarttime.split(';');
 			endarr = this.$inpendtime.split(';');
 			detailsarr = this.$inpdetails.split(';');
-			var arraydata = [];		
-			for (var i = 0; i < startarr.length; i++) {
-				arraydata.push({
-					"task": taskarr[i],
-					"type": typearr[i],
-					"startTime": startarr[i],
-					"endTime": endarr[i],
-					"details": detailsarr[i]
-				});
-			}
+			
 
 			console.log("************ARRAY DATA************");    
 			console.log(JSON.stringify(arraydata));	
