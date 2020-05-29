@@ -25,14 +25,14 @@
 				#container{
 				  margin: 0 auto;
 				  position: relative;
-				  width:1200px;
+				  width:1600px;
 				  overflow: visible;
 				}
 
 
 				  .svg {
-				    width:1200px;
-				    height:600px;
+				    width:1600px;
+				    height:800px;
 				    overflow: visible;
 				    position:absolute;
 				}
@@ -100,8 +100,8 @@
     // Create the chart
     function KGanttcreate(divid) {
 
-	var w = 800;
-  	var h = 400;	      	
+	var w = 1600;
+  	var h = 800;	      	
 	console.log("/////////////// Kgantt chart : " + JSON.stringify(divid));    	    
 	console.log("/////////////// D3 -1 : " + divid);    
 	var canvas = divid.getElementById("kganttchart");	
