@@ -599,8 +599,13 @@ console.log("/////////////// EOF : " + JSON.stringify(divid));
 		}
 		LoadLibs();
 	} else {		
-			console.log("************ Chart ************");    
-			var arraydata = [];
+			console.log("************ Chart ************");   
+			taskarr = this.$inptask.split(';');
+			typearr = this.$inptype.split(';');
+			startarr = this.$inpstarttime.split(';');
+			endarr = this.$inpendtime.split(';');
+			detailsarr = this.$inpdetails.split(';');
+			var arraydata = [];		
 			for (var i = 0; i < startarr.length; i++) {
 				arraydata.push({
 					"task": taskarr[i],
@@ -610,12 +615,9 @@ console.log("/////////////// EOF : " + JSON.stringify(divid));
 					"details": detailsarr[i]
 				});
 			}
-			var taskchar = 	this.$inptask;
-			console.log("%%%%%% task %%%%%%");	
-			console.log("task : " + taskchar);		
-			taskarr = taskchar.split(';');
+
 			console.log("************ARRAY DATA************");    
-			console.log(shadowRoot);	
+			console.log(JSON.stringify(arraydata));	
 
 			KGanttcreate(shadowRoot,JSON.stringify(arraydata));
 			
